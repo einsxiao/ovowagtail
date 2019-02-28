@@ -1,0 +1,116 @@
+Binary file ./dist/wagtail-2.1a0-py3.5.egg matches
+./docs/releases/1.0.rst:All of these templates are now deprecated. Wagtail now provides a set of Django form widgets for this purpose - ``AdminPageChooser``, ``AdminDocumentChooser``, ``AdminImageChooser`` and ``AdminSnippetChooser`` - which can be used in place of the ``HiddenInput`` widget that these form fields were previously using. The field can then be rendered using the regular ``wagtailadmin/shared/field.html`` or ``wagtailadmin/shared/field_as_li.html`` template.
+./wagtail.egg-info/SOURCES.txt:wagtail/admin/templates/wagtailadmin/block_forms/field.html
+./wagtail.egg-info/SOURCES.txt:wagtail/admin/templates/wagtailadmin/edit_handlers/field_panel_field.html
+./wagtail.egg-info/SOURCES.txt:wagtail/admin/templates/wagtailadmin/shared/field.html
+./wagtail.egg-info/SOURCES.txt:wagtail/documents/templates/wagtaildocs/documents/_file_field.html
+./wagtail.egg-info/SOURCES.txt:wagtail/images/templates/wagtailimages/images/_file_field.html
+./wagtail.egg-info/SOURCES.txt:wagtail/search/templates/wagtailsearch/queries/chooser_field.html
+./wagtail/users/templates/wagtailusers/groups/includes/page_permissions_form.html:    {% include "wagtailadmin/shared/field.html" with field=form.page only %}
+./wagtail/search/templates/wagtailsearch/queries/chooser_field.html:{% extends "wagtailadmin/shared/field.html" %}
+./wagtail/search/locale/en/LC_MESSAGES/django.po:#: templates/wagtailsearch/queries/chooser_field.html:3
+./wagtail/search/locale/en/LC_MESSAGES/django.po:#: templates/wagtailsearch/queries/chooser_field.html:8
+./wagtail/images/widgets.py:        original_field_html = super().render_html(name, value, attrs)
+./wagtail/images/widgets.py:            'original_field_html': original_field_html,
+./wagtail/images/templates/wagtailimages/images/_file_field_as_li.html:    {% include "wagtailimages/images/_file_field.html" %}
+./wagtail/images/templates/wagtailimages/images/_file_field.html:{% extends "wagtailadmin/shared/field.html" %}
+./wagtail/images/templates/wagtailimages/edit_handlers/image_chooser_panel.html:{% include "wagtailadmin/shared/field.html" %}
+./wagtail/images/locale/en/LC_MESSAGES/django.po:#: templates/wagtailimages/images/_file_field.html:8
+./wagtail/documents/widgets.py:        original_field_html = super().render_html(name, value, attrs)
+./wagtail/documents/widgets.py:            'original_field_html': original_field_html,
+./wagtail/documents/templates/wagtaildocs/documents/_file_field_as_li.html:    {% include "wagtaildocs/documents/_file_field.html" %}
+./wagtail/documents/templates/wagtaildocs/documents/_file_field.html:{% extends "wagtailadmin/shared/field.html" %}
+./wagtail/documents/templates/wagtaildocs/edit_handlers/document_chooser_panel.html:{% include "wagtailadmin/shared/field.html" %}
+./wagtail/documents/locale/en/LC_MESSAGES/django.po:#: templates/wagtaildocs/documents/_file_field.html:5
+./wagtail/contrib/table_block/templates/table_block/widgets/table.html:{{ original_field_html }}
+./wagtail/contrib/table_block/blocks.py:        original_field_html = super().render(name, value, attrs)
+./wagtail/contrib/table_block/blocks.py:            'original_field_html': original_field_html,
+./wagtail/contrib/styleguide/templates/wagtailstyleguide/base.html:                            {% include "wagtailimages/images/_file_field.html" %}
+./wagtail/contrib/search_promotions/templates/wagtailsearchpromotions/edit.html:                {% include "wagtailsearch/queries/chooser_field.html" with field=query_form.query_string only %}
+./wagtail/contrib/search_promotions/templates/wagtailsearchpromotions/includes/searchpromotion_form.html:                {% include "wagtailadmin/shared/field.html" with field=form.page only %}
+./wagtail/contrib/search_promotions/templates/wagtailsearchpromotions/includes/searchpromotion_form.html:                {% include "wagtailadmin/shared/field.html" with field=form.description only %}
+./wagtail/contrib/search_promotions/templates/wagtailsearchpromotions/add.html:                    {% include "wagtailsearch/queries/chooser_field.html" with field=query_form.query_string only %}
+./wagtail/core/blocks/field_block.py:        return render_to_string('wagtailadmin/block_forms/field.html', {
+./wagtail/snippets/widgets.py:        original_field_html = super().render_html(name, value, attrs)
+./wagtail/snippets/widgets.py:            'original_field_html': original_field_html,
+./wagtail/snippets/tests.py:        field_html = self.snippet_chooser_panel.render_as_field()
+./wagtail/snippets/tests.py:        self.assertIn(self.advert_text, field_html)
+./wagtail/snippets/tests.py:        self.assertIn("Choose advert", field_html)
+./wagtail/snippets/tests.py:        self.assertIn("Choose another advert", field_html)
+./wagtail/snippets/tests.py:        field_html = snippet_chooser_panel.render_as_field()
+./wagtail/snippets/tests.py:        self.assertIn("Choose advert", field_html)
+./wagtail/snippets/tests.py:        self.assertIn("Choose another advert", field_html)
+./wagtail/snippets/tests.py:        field_html = self.snippet_chooser_panel.render_as_field()
+./wagtail/snippets/tests.py:        self.assertIn(self.advert_text, field_html)
+./wagtail/snippets/tests.py:        self.assertIn("Choose advert with custom primary key", field_html)
+./wagtail/snippets/tests.py:        self.assertIn("Choose another advert with custom primary key", field_html)
+./wagtail/snippets/tests.py:        field_html = snippet_chooser_panel.render_as_field()
+./wagtail/snippets/tests.py:        self.assertIn("Choose advert with custom primary key", field_html)
+./wagtail/snippets/tests.py:        self.assertIn("Choose another advert with custom primary key", field_html)
+./wagtail/snippets/templates/wagtailsnippets/edit_handlers/snippet_chooser_panel.html:{% include "wagtailadmin/shared/field.html" %}
+./wagtail/admin/widgets.py:        original_field_html = super().render_html(name, value, attrs)
+./wagtail/admin/widgets.py:            'original_field_html': original_field_html,
+./wagtail/admin/edit_handlers.py:    field_template = "wagtailadmin/edit_handlers/field_panel_field.html"
+./wagtail/admin/edit_handlers.py:    * field_template (only required if the default template of field_panel_field.html is not usable)
+./wagtail/admin/templates/wagtailadmin/permissions/includes/collection_member_permissions_form.html:    {% include "wagtailadmin/shared/field.html" with field=form.collection only %}
+./wagtail/admin/templates/wagtailadmin/widgets/chooser.html:{{ original_field_html }}
+./wagtail/admin/templates/wagtailadmin/shared/field_as_li.html:    {% include "wagtailadmin/shared/field.html" %}
+./wagtail/admin/templates/wagtailadmin/edit_handlers/field_panel_field.html:{% include "wagtailadmin/shared/field.html" %}
+./wagtail/admin/templates/wagtailadmin/edit_handlers/page_chooser_panel.html:{% include "wagtailadmin/shared/field.html" %}
+./wagtail/admin/templates/wagtailadmin/edit_handlers/single_field_panel.html:            {% include "wagtailadmin/shared/field.html" with show_label=False show_help_text=False %}
+./wagtail/admin/templates/wagtailadmin/edit_handlers/chooser_panel.html:{% extends "wagtailadmin/shared/field.html" %}
+./wagtail/admin/templatetags/wagtailadmin_tags.py:            bound_field.html_name,
+./build/lib/wagtail/users/templates/wagtailusers/groups/includes/page_permissions_form.html:    {% include "wagtailadmin/shared/field.html" with field=form.page only %}
+./build/lib/wagtail/search/templates/wagtailsearch/queries/chooser_field.html:{% extends "wagtailadmin/shared/field.html" %}
+./build/lib/wagtail/search/locale/en/LC_MESSAGES/django.po:#: templates/wagtailsearch/queries/chooser_field.html:3
+./build/lib/wagtail/search/locale/en/LC_MESSAGES/django.po:#: templates/wagtailsearch/queries/chooser_field.html:8
+./build/lib/wagtail/images/widgets.py:        original_field_html = super().render_html(name, value, attrs)
+./build/lib/wagtail/images/widgets.py:            'original_field_html': original_field_html,
+./build/lib/wagtail/images/templates/wagtailimages/images/_file_field_as_li.html:    {% include "wagtailimages/images/_file_field.html" %}
+./build/lib/wagtail/images/templates/wagtailimages/images/_file_field.html:{% extends "wagtailadmin/shared/field.html" %}
+./build/lib/wagtail/images/templates/wagtailimages/edit_handlers/image_chooser_panel.html:{% include "wagtailadmin/shared/field.html" %}
+./build/lib/wagtail/images/locale/en/LC_MESSAGES/django.po:#: templates/wagtailimages/images/_file_field.html:8
+./build/lib/wagtail/documents/widgets.py:        original_field_html = super().render_html(name, value, attrs)
+./build/lib/wagtail/documents/widgets.py:            'original_field_html': original_field_html,
+./build/lib/wagtail/documents/templates/wagtaildocs/documents/_file_field_as_li.html:    {% include "wagtaildocs/documents/_file_field.html" %}
+./build/lib/wagtail/documents/templates/wagtaildocs/documents/_file_field.html:{% extends "wagtailadmin/shared/field.html" %}
+./build/lib/wagtail/documents/templates/wagtaildocs/edit_handlers/document_chooser_panel.html:{% include "wagtailadmin/shared/field.html" %}
+./build/lib/wagtail/documents/locale/en/LC_MESSAGES/django.po:#: templates/wagtaildocs/documents/_file_field.html:5
+./build/lib/wagtail/contrib/table_block/templates/table_block/widgets/table.html:{{ original_field_html }}
+./build/lib/wagtail/contrib/table_block/blocks.py:        original_field_html = super().render(name, value, attrs)
+./build/lib/wagtail/contrib/table_block/blocks.py:            'original_field_html': original_field_html,
+./build/lib/wagtail/contrib/styleguide/templates/wagtailstyleguide/base.html:                            {% include "wagtailimages/images/_file_field.html" %}
+./build/lib/wagtail/contrib/search_promotions/templates/wagtailsearchpromotions/edit.html:                {% include "wagtailsearch/queries/chooser_field.html" with field=query_form.query_string only %}
+./build/lib/wagtail/contrib/search_promotions/templates/wagtailsearchpromotions/includes/searchpromotion_form.html:                {% include "wagtailadmin/shared/field.html" with field=form.page only %}
+./build/lib/wagtail/contrib/search_promotions/templates/wagtailsearchpromotions/includes/searchpromotion_form.html:                {% include "wagtailadmin/shared/field.html" with field=form.description only %}
+./build/lib/wagtail/contrib/search_promotions/templates/wagtailsearchpromotions/add.html:                    {% include "wagtailsearch/queries/chooser_field.html" with field=query_form.query_string only %}
+./build/lib/wagtail/core/blocks/field_block.py:        return render_to_string('wagtailadmin/block_forms/field.html', {
+./build/lib/wagtail/snippets/widgets.py:        original_field_html = super().render_html(name, value, attrs)
+./build/lib/wagtail/snippets/widgets.py:            'original_field_html': original_field_html,
+./build/lib/wagtail/snippets/tests.py:        field_html = self.snippet_chooser_panel.render_as_field()
+./build/lib/wagtail/snippets/tests.py:        self.assertIn(self.advert_text, field_html)
+./build/lib/wagtail/snippets/tests.py:        self.assertIn("Choose advert", field_html)
+./build/lib/wagtail/snippets/tests.py:        self.assertIn("Choose another advert", field_html)
+./build/lib/wagtail/snippets/tests.py:        field_html = snippet_chooser_panel.render_as_field()
+./build/lib/wagtail/snippets/tests.py:        self.assertIn("Choose advert", field_html)
+./build/lib/wagtail/snippets/tests.py:        self.assertIn("Choose another advert", field_html)
+./build/lib/wagtail/snippets/tests.py:        field_html = self.snippet_chooser_panel.render_as_field()
+./build/lib/wagtail/snippets/tests.py:        self.assertIn(self.advert_text, field_html)
+./build/lib/wagtail/snippets/tests.py:        self.assertIn("Choose advert with custom primary key", field_html)
+./build/lib/wagtail/snippets/tests.py:        self.assertIn("Choose another advert with custom primary key", field_html)
+./build/lib/wagtail/snippets/tests.py:        field_html = snippet_chooser_panel.render_as_field()
+./build/lib/wagtail/snippets/tests.py:        self.assertIn("Choose advert with custom primary key", field_html)
+./build/lib/wagtail/snippets/tests.py:        self.assertIn("Choose another advert with custom primary key", field_html)
+./build/lib/wagtail/snippets/templates/wagtailsnippets/edit_handlers/snippet_chooser_panel.html:{% include "wagtailadmin/shared/field.html" %}
+./build/lib/wagtail/admin/widgets.py:        original_field_html = super().render_html(name, value, attrs)
+./build/lib/wagtail/admin/widgets.py:            'original_field_html': original_field_html,
+./build/lib/wagtail/admin/edit_handlers.py:    field_template = "wagtailadmin/edit_handlers/field_panel_field.html"
+./build/lib/wagtail/admin/edit_handlers.py:    * field_template (only required if the default template of field_panel_field.html is not usable)
+./build/lib/wagtail/admin/templates/wagtailadmin/permissions/includes/collection_member_permissions_form.html:    {% include "wagtailadmin/shared/field.html" with field=form.collection only %}
+./build/lib/wagtail/admin/templates/wagtailadmin/widgets/chooser.html:{{ original_field_html }}
+./build/lib/wagtail/admin/templates/wagtailadmin/shared/field_as_li.html:    {% include "wagtailadmin/shared/field.html" %}
+./build/lib/wagtail/admin/templates/wagtailadmin/edit_handlers/field_panel_field.html:{% include "wagtailadmin/shared/field.html" %}
+./build/lib/wagtail/admin/templates/wagtailadmin/edit_handlers/page_chooser_panel.html:{% include "wagtailadmin/shared/field.html" %}
+./build/lib/wagtail/admin/templates/wagtailadmin/edit_handlers/single_field_panel.html:            {% include "wagtailadmin/shared/field.html" with show_label=False show_help_text=False %}
+./build/lib/wagtail/admin/templates/wagtailadmin/edit_handlers/chooser_panel.html:{% extends "wagtailadmin/shared/field.html" %}
+./build/lib/wagtail/admin/templatetags/wagtailadmin_tags.py:            bound_field.html_name,
