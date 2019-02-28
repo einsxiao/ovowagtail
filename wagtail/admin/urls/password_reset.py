@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from wagtail.admin.forms import PasswordResetForm
+from wagtail.admin.forms.auth import PasswordResetForm
 from wagtail.admin.views import account
 
 urlpatterns = [

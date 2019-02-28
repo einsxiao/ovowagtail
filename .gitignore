@@ -4,6 +4,10 @@
 /.coverage
 /dist/
 /build/
+*/*.bak/
+*/*.bak.*/
+*.bak
+*.bak.*
 /MANIFEST
 /wagtail.egg-info/
 /docs/_build/

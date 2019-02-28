@@ -3,7 +3,7 @@ import json
 from django.http import Http404
 from django.shortcuts import get_object_or_404, render
 
-from wagtail.admin.forms import EmailLinkChooserForm, ExternalLinkChooserForm, SearchForm
+from wagtail.admin.forms.choosers import EmailLinkChooserForm, ExternalLinkChooserForm
 from wagtail.admin.modal_workflow import render_modal_workflow
 from wagtail.core import hooks
 from wagtail.core.models import Page, UserPagePermissionsProxy

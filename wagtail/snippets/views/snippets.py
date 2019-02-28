@@ -1,3 +1,5 @@
+from urllib.parse import urlencode
+
 from django.apps import apps
 from django.contrib.admin.utils import quote, unquote
 from django.http import Http404
@@ -8,7 +10,7 @@ from django.utils.translation import ugettext as _
 
 from wagtail.admin import messages
 from wagtail.admin.edit_handlers import ObjectList, extract_panel_definitions_from_model_class
-from wagtail.admin.forms import SearchForm
+from wagtail.admin.forms.search import SearchForm
 from wagtail.admin.utils import permission_denied
 from wagtail.search.backends import get_search_backend
 from wagtail.search.index import class_is_indexed
@@ -113,6 +115,7 @@ def list(request, app_label, model_name):
         'model_opts': model._meta,
         'items': paginated_items,
         'can_add_snippet': request.user.has_perm(get_permission_name('add', model)),
+        'can_delete_snippets': request.user.has_perm(get_permission_name('delete', model)),
         'is_searchable': is_searchable,
         'search_form': search_form,
         'is_searching': is_searching,
@@ -167,6 +170,57 @@ def create(request, app_label, model_name):
         'form': form,
     })
 
+def create_copy(request, app_label, model_name):
+    model = get_snippet_model_from_url_params(app_label, model_name)
+
+    permission = get_permission_name('add', model)
+    if not request.user.has_perm(permission):
+        return permission_denied(request)
+
+    pk = request.GET.get('id')
+    instance = get_object_or_404(model, pk=unquote(pk))
+    instance.pk = None
+    edit_handler = get_snippet_edit_handler(model)
+    form_class = edit_handler.get_form_class()
+
+    if request.method == 'POST':
+        form = form_class(request.POST, request.FILES, instance=instance)
+
+        if form.is_valid():
+            form.save()
+
+            messages.success(
+                request,
+                _("{snippet_type} '{instance}' created.").format(
+                    snippet_type=capfirst(model._meta.verbose_name),
+                    instance=instance
+                ),
+                buttons=[
+                    messages.button(reverse(
+                        'wagtailsnippets:edit', args=(app_label, model_name, quote(instance.pk))
+                    ), _('Edit'))
+                ]
+            )
+            return redirect('wagtailsnippets:list', app_label, model_name)
+        else:
+            messages.error(request, _("The snippet could not be created due to errors."))
+            edit_handler = edit_handler.bind_to_instance(instance=instance,
+                                                         form=form,
+                                                         request=request)
+    else:
+        form = form_class(instance=instance)
+        edit_handler = edit_handler.bind_to_instance(instance=instance,
+                                                     form=form,
+                                                     request=request)
+
+    return render(request, 'wagtailsnippets/snippets/create.html', {
+        'model_opts': model._meta,
+        'edit_handler': edit_handler,
+        'form': form,
+    })
+
+
+
 
 def edit(request, app_label, model_name, pk):
     model = get_snippet_model_from_url_params(app_label, model_name)
@@ -217,31 +271,49 @@ def edit(request, app_label, model_name, pk):
     })
 
 
-def delete(request, app_label, model_name, pk):
+def delete(request, app_label, model_name, pk=None):
     model = get_snippet_model_from_url_params(app_label, model_name)
 
     permission = get_permission_name('delete', model)
     if not request.user.has_perm(permission):
         return permission_denied(request)
 
-    instance = get_object_or_404(model, pk=unquote(pk))
+    if pk:
+        instances = [get_object_or_404(model, pk=unquote(pk))]
+    else:
+        ids = request.GET.getlist('id')
+        instances = model.objects.filter(pk__in=ids)
+
+    count = len(instances)
 
     if request.method == 'POST':
-        instance.delete()
-        messages.success(
-            request,
-            _("{snippet_type} '{instance}' deleted.").format(
+        for instance in instances:
+            instance.delete()
+
+        if count == 1:
+            message_content = _("{snippet_type} '{instance}' deleted.").format(
                 snippet_type=capfirst(model._meta.verbose_name_plural),
                 instance=instance
             )
-        )
+        else:
+            message_content = _("{count} {snippet_type} deleted.").format(
+                snippet_type=capfirst(model._meta.verbose_name_plural),
+                count=count
+            )
+
+        messages.success(request, message_content)
+
         return redirect('wagtailsnippets:list', app_label, model_name)
 
     return render(request, 'wagtailsnippets/snippets/confirm_delete.html', {
         'model_opts': model._meta,
-        'instance': instance,
+        'count': count,
+        'instances': instances,
+        'submit_url': (
+            reverse('wagtailsnippets:delete-multiple', args=(app_label, model_name))
+            + '?' + urlencode([('id', instance.pk) for instance in instances])
+        ),
     })
-
 
 def usage(request, app_label, model_name, pk):
     model = get_snippet_model_from_url_params(app_label, model_name)

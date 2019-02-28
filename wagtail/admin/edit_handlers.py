@@ -105,6 +105,10 @@ class EditHandler:
         self.heading = heading
         self.classname = classname
         self.help_text = help_text
+        self.model = None
+        self.instance = None
+        self.request = None
+        self.form = None
 
     def clone(self):
         return self.__class__(
@@ -138,6 +142,30 @@ class EditHandler:
         new = self.clone()
         new.model = model
         new.on_model_bound()
+        return new
+
+    def bind_to(self, model=None, instance=None, request=None, form=None):
+        if model is None and instance is not None and self.model is None:
+            model = instance._meta.model
+
+        new = self.clone()
+        new.model = self.model if model is None else model
+        new.instance = self.instance if instance is None else instance
+        new.request = self.request if request is None else request
+        new.form = self.form if form is None else form
+
+        if new.model is not None:
+            new.on_model_bound()
+
+        if new.instance is not None:
+            new.on_instance_bound()
+
+        if new.request is not None:
+            new.on_request_bound()
+
+        if new.form is not None:
+            new.on_form_bound()
+
         return new
 
     def on_model_bound(self):

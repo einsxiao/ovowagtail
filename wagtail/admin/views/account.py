@@ -14,7 +14,9 @@ from django.views.decorators.debug import sensitive_post_parameters
 
 from wagtail.admin import forms
 from wagtail.core import hooks
-from wagtail.users.forms import EmailForm, NotificationPreferencesForm, PreferredLanguageForm
+from wagtail.admin.forms.auth import LoginForm, PasswordResetForm
+from wagtail.users.forms import (
+    EmailForm, NotificationPreferencesForm, PreferredLanguageForm)
 from wagtail.users.models import UserProfile
 from wagtail.utils.loading import get_custom_form
 
