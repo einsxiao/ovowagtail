@@ -69,7 +69,7 @@ setup(
     description='A Django content management system focused on flexibility and user experience',
     author='Matthew Westcott',
     author_email='matthew.westcott@torchbox.com',
-    url='http://wagtail.io/',
+    url='http://ovo.ltd/wagtail-ov/',
     packages=find_packages(),
     include_package_data=True,
     license='BSD',
