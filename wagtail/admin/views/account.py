@@ -26,7 +26,7 @@ def get_user_login_form():
     if hasattr(settings, form_setting):
         return get_custom_form(form_setting)
     else:
-        return forms.LoginForm
+        return LoginForm
 
 
 # Helper functions to check password management settings to enable/disable views as appropriate.

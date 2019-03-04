@@ -3,102 +3,113 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-
 msgid ""
 msgstr ""
 "Project-Id-Version: Wagtail\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-16 11:28+0000\n"
+"POT-Creation-Date: 2019-03-04 11:55+0800\n"
 "PO-Revision-Date: 2018-02-16 11:33+0000\n"
 "Last-Translator: Matt Westcott <matthew@torchbox.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/torchbox/wagtail/"
 "language/zh_CN/)\n"
+"Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: apps.py:10
+msgid "Wagtail admin"
+msgstr "管理界面"
+
+#: compare.py:153
 msgid "None"
 msgstr "无"
 
+#: decorators.py:31
 msgid "You do not have permission to access the admin"
 msgstr "你没有访问后台管理的权限"
 
+#: edit_handlers.py:784
 msgid "Scheduled publishing"
 msgstr "定时发布"
 
+#: edit_handlers.py:802
 msgid "Common page configuration"
 msgstr "常用页面配置"
 
+#: edit_handlers.py:825
 msgid "Content"
 msgstr "内容"
 
+#: edit_handlers.py:827
 msgid "Promote"
 msgstr "推荐"
 
+#: edit_handlers.py:829 wagtail_hooks.py:61
 msgid "Settings"
 msgstr "设置"
 
-msgid "Search"
-msgstr "搜索"
-
-msgid "Search term"
-msgstr "搜索条件"
-
-msgid "URL"
-msgstr "URL"
-
+#: forms/auth.py:13
 msgid "Enter password"
 msgstr "输入密码"
 
+#: forms/auth.py:19
 #, python-format
 msgid "Enter your %s"
 msgstr "输入你的 %s"
 
+#: forms/auth.py:30
 msgid "Enter your email address to reset your password"
 msgstr "输入邮件地址以重置密码"
 
-msgid "Please fill your email address."
-msgstr "请填入邮件地址"
+#: forms/choosers.py:30
+msgid "URL"
+msgstr "URL"
 
-msgid ""
-"Sorry, you cannot reset your password here as your user account is managed "
-"by another server."
-msgstr "对不起，您无法重置密码，因为账户不在此处管理"
+#: forms/collections.py:134
+msgid "You cannot have multiple permission records for the same collection."
+msgstr "对于同一个集合你不能设置多重权限"
 
-msgid "This email address is not recognised."
-msgstr "未知邮件地址"
-
+#: forms/pages.py:20
 msgid "New title"
 msgstr "新标题"
 
+#: forms/pages.py:21
 msgid "New slug"
 msgstr "新缩略名"
 
+#: forms/pages.py:26
 msgid "New parent page"
 msgstr "新父页面"
 
+#: forms/pages.py:27
 msgid "This copy will be a child of this given parent page."
 msgstr "此副本将成为指定父页面的子页面。"
 
+#: forms/pages.py:33
 msgid "Copy subpages"
 msgstr "复制子页面"
 
+#: forms/pages.py:35
 #, python-format
 msgid "This will copy %(count)s subpage."
 msgid_plural "This will copy %(count)s subpages."
 msgstr[0] "此操作将复制%(count)s 子页面。"
 
+#: forms/pages.py:44
 msgid "Publish copied page"
 msgstr "发布复制的页面。"
 
+#: forms/pages.py:45
 msgid "This page is live. Would you like to publish its copy as well?"
 msgstr "此页面已发布。你也想发布它的副本吗？"
 
+#: forms/pages.py:47
 msgid "Publish copies"
 msgstr "发布副本"
 
+#: forms/pages.py:49
 #, python-format
 msgid ""
 "%(count)s of the pages being copied is live. Would you like to publish its "
@@ -108,201 +119,324 @@ msgid_plural ""
 "their copies?"
 msgstr[0] "正在复制的 %(count)s 个页面已是发布状态，你要发布他们的副本吗？"
 
+#: forms/pages.py:69
 #, python-format
 msgid "You do not have permission to copy to page \"%(page_title)s\""
 msgstr "你没有权限复制到页面“%(page_title)s”"
 
+#: forms/pages.py:75
 #, python-format
 msgid ""
 "This slug is already in use within the context of its parent page \"%s\""
 msgstr "此缩略名在其父页面\"%s\"上下文中已被使用。"
 
+#: forms/pages.py:83
 msgid "You cannot copy a page into itself when copying subpages"
 msgstr "你在复制子页面时不能复制当前页面本身"
 
-msgid "Visibility"
-msgstr "是否可见"
-
-msgid "This field is required."
-msgstr "必需字段"
-
-msgid "Please select at least one group."
-msgstr "请至少选择一个组。"
-
+#: forms/pages.py:114
 msgid "This slug is already in use"
 msgstr "此缩略名已被使用"
 
+#: forms/pages.py:123
 msgid "Go live date/time must be before expiry date/time"
 msgstr "发布日期/时间必须早于过期日期/时间"
 
+#: forms/pages.py:129
 msgid "Expiry date/time must be in the future"
 msgstr "过期日期/时间必须是未来时间。"
 
-msgid "You cannot have multiple permission records for the same collection."
-msgstr "对于同一个集合你不能设置多重权限"
+#: forms/search.py:8 templates/wagtailadmin/pages/search.html:3
+#: templates/wagtailadmin/pages/search.html:17
+#: templates/wagtailadmin/shared/menu_search.html:5
+#: templates/wagtailadmin/shared/menu_search.html:6
+#: templates/wagtailadmin/shared/menu_search.html:7 views/mixins.py:9
+msgid "Search"
+msgstr "搜索"
 
+#: forms/search.py:12
+msgid "Search term"
+msgstr "搜索条件"
+
+#: forms/view_restrictions.py:11
+msgid "Visibility"
+msgstr "是否可见"
+
+#: forms/view_restrictions.py:23
+msgid "This field is required."
+msgstr "必需字段"
+
+#: forms/view_restrictions.py:29
+msgid "Please select at least one group."
+msgstr "请至少选择一个组。"
+
+#: templates/wagtailadmin/404.html:3
 msgid "Error 404: Page not found"
 msgstr "404错误：没有找到页面"
 
+#: templates/wagtailadmin/404.html:22
 msgid "Error 404"
 msgstr "404错误"
 
+#: templates/wagtailadmin/404.html:26
 msgid "The requested page could not be found."
 msgstr "找不到请求的页面。"
 
+#: templates/wagtailadmin/404.html:29
+#: templates/wagtailadmin/userbar/item_admin.html:6
 msgid "Go to Wagtail admin"
 msgstr "转到管理界面"
 
+#: templates/wagtailadmin/account/account.html:4
+#: templates/wagtailadmin/account/account.html:6
 msgid "Account"
 msgstr "帐号"
 
-msgid "Set gravatar"
-msgstr "设置gravatar（全球通用头像）"
+#: templates/wagtailadmin/account/change_email.html:4
+#: templates/wagtailadmin/account/change_email.html:6
+#: templates/wagtailadmin/account/change_email.html:17 wagtail_hooks.py:210
+msgid "Change email"
+msgstr "修改邮件地址"
 
-msgid ""
-"Your avatar image is provided by Gravatar and is connected to your email "
-"address. With a Gravatar account you can set an avatar for any number of "
-"other email addresses you use."
-msgstr ""
-"您的头像是由Gravatar提供，与您的邮件地址关联。只需一个Gravatar帐号，你就可以"
-"为你使用的任意多个邮件地址设置头像。"
-
+#: templates/wagtailadmin/account/change_password.html:4
+#: templates/wagtailadmin/account/change_password.html:6
+#: templates/wagtailadmin/account/change_password.html:18 wagtail_hooks.py:220
 msgid "Change password"
 msgstr "修改密码"
 
-msgid "Change the password you use to log in."
-msgstr "修改用于登录的密码"
-
-msgid "Notification preferences"
-msgstr "提醒设置"
-
-msgid "Choose which email notifications to receive."
-msgstr "选择接收哪些邮件提醒"
-
-msgid "Language preferences"
-msgstr "语言首选项"
-
-msgid "Choose the language you want to use here."
-msgstr "请在这里选择你想使用的语言。"
-
+#: templates/wagtailadmin/account/change_password.html:21
 msgid ""
 "Your password can't be changed here. Please contact a site administrator."
 msgstr "您不能修改密码，请联系管理员。"
 
+#: templates/wagtailadmin/account/language_preferences.html:4
+#: templates/wagtailadmin/account/language_preferences.html:6
 msgid "Language Preferences"
 msgstr "语言首选项"
 
+#: templates/wagtailadmin/account/language_preferences.html:16
+#: templates/wagtailadmin/account/notification_preferences.html:16
 msgid "Update"
 msgstr "更新"
 
+#: templates/wagtailadmin/account/notification_preferences.html:4
+#: templates/wagtailadmin/account/notification_preferences.html:6
+#: wagtail_hooks.py:231
+msgid "Notification preferences"
+msgstr "提醒设置"
+
+#: templates/wagtailadmin/account/password_reset/complete.html:3
+#: templates/wagtailadmin/account/password_reset/confirm.html:55
+#: templates/wagtailadmin/account/password_reset/done.html:3
+#: templates/wagtailadmin/account/password_reset/form.html:3
+#: templates/wagtailadmin/account/password_reset/form.html:43
 msgid "Reset password"
 msgstr "重置密码"
 
+#: templates/wagtailadmin/account/password_reset/complete.html:14
 msgid "Password change successful"
 msgstr "密码修改成功。"
 
+#: templates/wagtailadmin/account/password_reset/complete.html:15
 msgid "Login"
 msgstr "登录"
 
+#: templates/wagtailadmin/account/password_reset/confirm.html:5
+#: templates/wagtailadmin/account/password_reset/confirm.html:23
 msgid "Set your new password"
 msgstr "设置新密码"
 
-msgid "The passwords do not match. Please try again."
-msgstr "密码不匹配，请重试"
+#: templates/wagtailadmin/account/password_reset/confirm.html:7
+#: templates/wagtailadmin/account/password_reset/confirm.html:60
+msgid "Invalid password reset link"
+msgstr "无效的密码重置链接。"
 
+#: templates/wagtailadmin/account/password_reset/confirm.html:64
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used."
+msgstr "密码重置链接已失效,可能是因为此链接已经被使用过."
+
+#: templates/wagtailadmin/account/password_reset/confirm.html:68
+msgid "Request a new password reset"
+msgstr "请求设置新密码"
+
+#: templates/wagtailadmin/account/password_reset/done.html:14
 msgid "Check your email"
 msgstr "检查您的邮件"
 
-msgid "A link to reset your password has been emailed to you."
+#: templates/wagtailadmin/account/password_reset/done.html:15
+msgid ""
+"A link to reset your password has been emailed to you if an account exists "
+"for this address."
 msgstr "已将重置密码的链接发送到您的邮箱。"
 
+#: templates/wagtailadmin/account/password_reset/email.txt:2
 msgid "Please follow the link below to reset your password:"
 msgstr "请点击下面的链接来重置密码"
 
+#: templates/wagtailadmin/account/password_reset/email.txt:6
 msgid "Your username (in case you've forgotten):"
 msgstr "以防遗忘，请填写你的用户名:"
 
+#: templates/wagtailadmin/account/password_reset/email_subject.txt:2
 msgid "Password reset"
 msgstr "密码已重置。"
 
+#: templates/wagtailadmin/account/password_reset/form.html:26
 msgid "Reset your password"
 msgstr "重设密码"
 
+#: templates/wagtailadmin/admin_base.html:31
+#: templates/wagtailadmin/home/pages_for_moderation.html:42
+#: templates/wagtailadmin/home/recent_edits.html:28
+#: templates/wagtailadmin/pages/revisions/list.html:30 views/generic.py:107
+#: views/generic.py:174 views/pages.py:221 views/pages.py:227
+#: views/pages.py:241 views/pages.py:379 views/pages.py:403 views/pages.py:422
+#: views/pages.py:681 views/pages.py:743 views/pages.py:916 views/pages.py:937
+#: views/pages.py:1154 wagtail_hooks.py:102
 msgid "Edit"
 msgstr "编辑"
 
+#: templates/wagtailadmin/admin_base.html:32
+#: templates/wagtailadmin/block_forms/list_member.html:8
+#: templates/wagtailadmin/block_forms/stream_member.html:17
+#: templates/wagtailadmin/edit_handlers/inline_panel_child.html:8
+#: templates/wagtailadmin/pages/confirm_delete.html:6
+#: templates/wagtailadmin/pages/edit.html:52
+#: templates/wagtailadmin/permissions/includes/collection_member_permissions_form.html:13
+#: views/generic.py:130 wagtail_hooks.py:167
 msgid "Delete"
 msgstr "删除"
 
+#: templates/wagtailadmin/admin_base.html:33
 msgid "Page"
 msgstr "页面"
 
+#: templates/wagtailadmin/admin_base.html:34 wagtail_hooks.py:48
+#: wagtail_hooks.py:72
 msgid "Pages"
 msgstr "页面"
 
+#: templates/wagtailadmin/admin_base.html:35
 msgid "Loading…"
 msgstr "正在载入..."
 
+#: templates/wagtailadmin/admin_base.html:36
 msgid "No results"
 msgstr "没有结果"
 
+#: templates/wagtailadmin/admin_base.html:37
 msgid "Server Error"
 msgstr "服务器错误"
 
+#: templates/wagtailadmin/admin_base.html:38
 msgid "See children"
 msgstr "查看子页面"
 
+#: templates/wagtailadmin/admin_base.html:39
 msgid "See all"
 msgstr "查看全部"
 
+#: templates/wagtailadmin/admin_base.html:40
 msgid "Close explorer"
 msgstr "关闭资源管理"
 
+#: templates/wagtailadmin/admin_base.html:41
 msgid "Alt text"
 msgstr "Alt标签"
 
+#: templates/wagtailadmin/admin_base.html:42
 msgid "Write here…"
 msgstr "写在这里..."
 
+#: templates/wagtailadmin/admin_base.html:43
 msgid "Horizontal line"
 msgstr "横线"
 
+#: templates/wagtailadmin/admin_base.html:44
 msgid "Line break"
 msgstr "换行"
 
+#: templates/wagtailadmin/admin_base.html:45
 msgid "Undo"
 msgstr "撤销"
 
+#: templates/wagtailadmin/admin_base.html:46
 msgid "Redo"
 msgstr "重复"
 
+#: templates/wagtailadmin/admin_base.html:47
+msgid "Reload the page"
+msgstr "重载此页"
+
+#: templates/wagtailadmin/admin_base.html:48
+msgid "Reload saved content"
+msgstr "重新载入已保存的内容"
+
+#: templates/wagtailadmin/admin_base.html:49
+msgid "Show latest content"
+msgstr "显示最新内容"
+
+#: templates/wagtailadmin/admin_base.html:50
+msgid "Show error"
+msgstr "显示错误"
+
+#: templates/wagtailadmin/admin_base.html:51
+msgid ""
+"The editor just crashed. Content has been reset to the last saved version."
+msgstr "很不幸,就在刚才,编辑器崩溃了. 内容已经被重置为最近保存版本."
+
+#: templates/wagtailadmin/base.html:17 templates/wagtailadmin/home.html:3
 msgid "Dashboard"
 msgstr "控制面板"
 
+#: templates/wagtailadmin/base.html:42
 msgid "Menu"
 msgstr "菜单"
 
+#: templates/wagtailadmin/block_forms/list.html:13
 msgid "Add another"
 msgstr "添加另外一个"
 
+#: templates/wagtailadmin/block_forms/list_member.html:6
+#: templates/wagtailadmin/block_forms/stream_member.html:14
+#: templates/wagtailadmin/block_forms/stream_member.html:15
+#: templates/wagtailadmin/edit_handlers/inline_panel_child.html:5
 msgid "Move up"
 msgstr "上移"
 
+#: templates/wagtailadmin/block_forms/list_member.html:7
+#: templates/wagtailadmin/block_forms/stream_member.html:16
+#: templates/wagtailadmin/edit_handlers/inline_panel_child.html:6
 msgid "Move down"
 msgstr "下移"
 
+#: templates/wagtailadmin/block_forms/stream_member.html:14
+msgid "Minimize/Maximize"
+msgstr "最小化/最大化"
+
+#: templates/wagtailadmin/chooser/_browse_results.html:3
 msgid "Explorer"
 msgstr "资源管理"
 
+#: templates/wagtailadmin/chooser/_link_types.html:5
+#: templates/wagtailadmin/chooser/_link_types.html:8
+#: templates/wagtailadmin/chooser/_link_types.html:10
 msgid "Internal link"
 msgstr "内部链接"
 
+#: templates/wagtailadmin/chooser/_link_types.html:15
+#: templates/wagtailadmin/chooser/_link_types.html:17
 msgid "External link"
 msgstr "外部链接"
 
+#: templates/wagtailadmin/chooser/_link_types.html:21
+#: templates/wagtailadmin/chooser/_link_types.html:23
 msgid "Email link"
 msgstr "电子邮件链接"
 
+#: templates/wagtailadmin/chooser/_search_results.html:4
 #, python-format
 msgid ""
 "\n"
@@ -317,12 +451,15 @@ msgstr[0] ""
 "             %(counter)s 匹配\n"
 "        "
 
+#: templates/wagtailadmin/chooser/browse.html:3
 msgid "Choose"
 msgstr "选择"
 
+#: templates/wagtailadmin/chooser/browse.html:5 widgets.py:150
 msgid "Choose a page"
 msgstr "选择一个页面"
 
+#: templates/wagtailadmin/chooser/browse.html:15
 #, python-format
 msgid ""
 "\n"
@@ -338,47 +475,72 @@ msgstr[0] ""
 "\n"
 "这里只能选择 \"%(type)s\"类型的页面。搜索结果会过滤掉其它类型。"
 
+#: templates/wagtailadmin/chooser/email_link.html:2
 msgid "Add an email link"
 msgstr "添加一个电子邮件链接"
 
+#: templates/wagtailadmin/chooser/email_link.html:14
+#: templates/wagtailadmin/chooser/external_link.html:14
 msgid "Insert link"
 msgstr "插入链接"
 
+#: templates/wagtailadmin/chooser/external_link.html:2
 msgid "Add an external link"
 msgstr "添加一个外部链接"
 
+#: templates/wagtailadmin/collection_privacy/ancestor_privacy.html:2
+#: templates/wagtailadmin/collection_privacy/set_privacy.html:2
 msgid "Collection privacy"
 msgstr "集合私有设置"
 
+#: templates/wagtailadmin/collection_privacy/ancestor_privacy.html:6
 msgid "This collection has been made private by a parent collection."
 msgstr "这个集合已经被父集合设为私有。"
 
+#: templates/wagtailadmin/collection_privacy/ancestor_privacy.html:7
+#: templates/wagtailadmin/page_privacy/ancestor_privacy.html:7
 msgid "You can edit the privacy settings on:"
 msgstr "你可以在这里修改此私有设置："
 
+#: templates/wagtailadmin/collection_privacy/set_privacy.html:6
 msgid ""
 "Privacy settings determine who is able to view documents in this collection."
 msgstr "私有设置决定谁可以查看这个集合中的文档。"
 
+#: templates/wagtailadmin/collection_privacy/set_privacy.html:16
+#: templates/wagtailadmin/generic/create.html:24
+#: templates/wagtailadmin/generic/edit.html:27
+#: templates/wagtailadmin/page_privacy/set_privacy.html:16
 msgid "Save"
 msgstr "保存"
 
+#: templates/wagtailadmin/collections/_privacy_switch.html:7
+#: templates/wagtailadmin/pages/_privacy_switch.html:10
 msgid "Privacy"
 msgstr "私有设置"
 
+#: templates/wagtailadmin/collections/_privacy_switch.html:10
+#: templates/wagtailadmin/pages/_privacy_switch.html:14
+#: templates/wagtailadmin/pages/_privacy_switch.html:19
 msgid "Public"
 msgstr "公开"
 
+#: templates/wagtailadmin/collections/_privacy_switch.html:11
+#: templates/wagtailadmin/pages/_privacy_switch.html:15
+#: templates/wagtailadmin/pages/_privacy_switch.html:21
 msgid "Private"
 msgstr "私有"
 
+#: templates/wagtailadmin/collections/delete_not_empty.html:10
 msgid ""
 "This collection cannot be deleted, because it is not empty. It contains:"
 msgstr "集合非空，不能删除，它包含有："
 
+#: templates/wagtailadmin/collections/index.html:12
 msgid "Name"
 msgstr "名字"
 
+#: templates/wagtailadmin/collections/index.html:32
 #, python-format
 msgid ""
 "No collections have been created. Why not <a href=\"%(add_collection_url)s"
@@ -386,71 +548,120 @@ msgid ""
 msgstr ""
 "没有创建任何集合，为何不<a href=\"%(add_collection_url)s\">创建一个</a>"
 
+#: templates/wagtailadmin/edit_handlers/inline_panel.html:28
 #, python-format
 msgid "Add %(label)s"
 msgstr "增加 %(label)s"
 
+#: templates/wagtailadmin/generic/confirm_delete.html:12
 msgid "Yes, delete"
 msgstr "是的， 删除"
 
+#: templates/wagtailadmin/home.html:19
 #, python-format
 msgid "Welcome to the %(site_name)s Wagtail CMS"
 msgstr "欢迎使用 %(site_name)s  Wagtail 内容管理系统"
 
+#: templates/wagtailadmin/home.html:30
 msgid ""
 "This is your dashboard on which helpful information about content you've "
 "created will be displayed."
 msgstr "这是您的主控台，将会显示您创建的内容的帮助信息。"
 
+#: templates/wagtailadmin/home/pages_for_moderation.html:5
 msgid "Pages awaiting moderation"
 msgstr "页面等待审核中"
 
+#: templates/wagtailadmin/home/pages_for_moderation.html:13
+#: templates/wagtailadmin/home/recent_edits.html:12
+#: templates/wagtailadmin/pages/listing/_table_headers_explore.html:33
+#: templates/wagtailadmin/pages/listing/_table_headers_explore.html:36
 msgid "Title"
 msgstr "标题"
 
+#: templates/wagtailadmin/home/pages_for_moderation.html:14
+#: templates/wagtailadmin/pages/listing/_list_choose.html:13
+#: templates/wagtailadmin/pages/listing/_list_move.html:13
+#: templates/wagtailadmin/pages/listing/_table_headers_explore.html:40
 msgid "Parent"
 msgstr "上一级"
 
+#: templates/wagtailadmin/home/pages_for_moderation.html:15
+#: templates/wagtailadmin/pages/listing/_list_choose.html:16
+#: templates/wagtailadmin/pages/listing/_list_move.html:16
+#: templates/wagtailadmin/pages/listing/_table_headers_explore.html:54
+#: templates/wagtailadmin/pages/listing/_table_headers_explore.html:57
 msgid "Type"
 msgstr "类型"
 
+#: templates/wagtailadmin/home/pages_for_moderation.html:16
 msgid "Edited"
 msgstr "已编辑"
 
+#: templates/wagtailadmin/home/pages_for_moderation.html:24
+#: templates/wagtailadmin/home/recent_edits.html:22
+#: templates/wagtailadmin/pages/listing/_page_title_explore.html:13
+#: templates/wagtailadmin/pages/revisions/compare.html:13
+#: templates/wagtailadmin/userbar/item_page_edit.html:6 widgets.py:152
 msgid "Edit this page"
 msgstr "编辑此页"
 
+#: templates/wagtailadmin/home/pages_for_moderation.html:33
+#: templates/wagtailadmin/userbar/item_page_approve.html:8
 msgid "Approve"
 msgstr "通过"
 
+#: templates/wagtailadmin/home/pages_for_moderation.html:39
+#: templates/wagtailadmin/userbar/item_page_reject.html:8
 msgid "Reject"
 msgstr "拒绝"
 
+#: templates/wagtailadmin/home/pages_for_moderation.html:43
+#: templates/wagtailadmin/pages/create.html:45
+#: templates/wagtailadmin/pages/edit.html:68
+#: templates/wagtailadmin/pages/revisions/list.html:28
 msgid "Preview"
 msgstr "预览"
 
+#: templates/wagtailadmin/home/pages_for_moderation.html:53
+#: templates/wagtailadmin/home/recent_edits.html:37
+#: templates/wagtailadmin/pages/listing/_list.html:27
+#: templates/wagtailadmin/pages/listing/_list.html:66
 #, python-format
 msgid "%(time_period)s ago"
 msgstr "%(time_period)s 之前"
 
+#: templates/wagtailadmin/home/recent_edits.html:5
 msgid "Your most recent edits"
 msgstr "最近编辑"
 
+#: templates/wagtailadmin/home/recent_edits.html:13
 msgid "Date"
 msgstr "日期"
 
+#: templates/wagtailadmin/home/recent_edits.html:14
+#: templates/wagtailadmin/pages/edit.html:20
+#: templates/wagtailadmin/pages/listing/_list_choose.html:17
+#: templates/wagtailadmin/pages/listing/_list_move.html:17
+#: templates/wagtailadmin/pages/listing/_table_headers_explore.html:63
+#: templates/wagtailadmin/pages/listing/_table_headers_explore.html:66
 msgid "Status"
 msgstr "状态"
 
+#: templates/wagtailadmin/home/recent_edits.html:30
 msgid "Draft"
 msgstr "草稿"
 
+#: templates/wagtailadmin/home/recent_edits.html:33 views/pages.py:1092
+#: views/pages.py:1110
 msgid "Live"
 msgstr "发布"
 
+#: templates/wagtailadmin/home/site_summary.html:3
 msgid "Site summary"
 msgstr "网站摘要"
 
+#: templates/wagtailadmin/home/site_summary_pages.html:5
 #, python-format
 msgid ""
 "\n"
@@ -465,101 +676,141 @@ msgstr[0] ""
 "        <span>%(total)s</span> 页面\n"
 "    "
 
+#: templates/wagtailadmin/login.html:3 templates/wagtailadmin/login.html:83
 msgid "Sign in"
 msgstr "登录"
 
+#: templates/wagtailadmin/login.html:18
 #, python-format
 msgid "Your %(username_field)s and password didn't match. Please try again."
 msgstr "用户 %(username_field)s 密码不匹配，请重试"
 
+#: templates/wagtailadmin/login.html:36
 msgid "Sign in to Wagtail"
 msgstr "登录Wagtail"
 
+#: templates/wagtailadmin/login.html:56
 msgid "Forgotten it?"
 msgstr "不记得了？"
 
+#: templates/wagtailadmin/login.html:83
 msgid "Signing in…"
 msgstr "正在登录..."
 
+#: templates/wagtailadmin/notifications/approved.html:5
+#: templates/wagtailadmin/notifications/approved.txt:5
 #, python-format
 msgid "The page \"%(title)s\" has been approved."
 msgstr "页面\"%(title)s\"已批准。"
 
+#: templates/wagtailadmin/notifications/approved.html:6
+#: templates/wagtailadmin/notifications/approved.txt:7
 msgid "You can view the page here:"
 msgstr "在这里查看页面："
 
+#: templates/wagtailadmin/notifications/approved_subject.txt:3
 #, python-format
 msgid "The page \"%(title)s\" has been approved"
 msgstr "页面\"%(title)s\"已批准"
 
+#: templates/wagtailadmin/notifications/base.html:111
+#: templates/wagtailadmin/notifications/base.txt:4
 #, python-format
 msgid "Hello %(username)s,"
 msgstr "%(username)s 你好，"
 
+#: templates/wagtailadmin/notifications/base.html:117
+#: templates/wagtailadmin/notifications/base.txt:11
 msgid "Edit your notification preferences here:"
 msgstr "在此编辑通知选择"
 
+#: templates/wagtailadmin/notifications/rejected.html:5
+#: templates/wagtailadmin/notifications/rejected.txt:5
 #, python-format
 msgid "The page \"%(title)s\" has been rejected."
 msgstr "页面\"%(title)s\"被驳回。"
 
+#: templates/wagtailadmin/notifications/rejected.html:6
+#: templates/wagtailadmin/notifications/rejected.txt:7
+#: templates/wagtailadmin/notifications/submitted.html:10
+#: templates/wagtailadmin/notifications/submitted.txt:8
 msgid "You can edit the page here:"
 msgstr "你可以在此编辑页面："
 
+#: templates/wagtailadmin/notifications/rejected_subject.txt:3
 #, python-format
 msgid "The page \"%(title)s\" has been rejected"
 msgstr "页面\"%(title)s\"被驳回"
 
+#: templates/wagtailadmin/notifications/submitted.html:6
+#: templates/wagtailadmin/notifications/submitted.txt:5
 #, python-format
 msgid "The page \"%(page)s\" has been submitted for moderation by %(editor)s."
 msgstr "页面“%(page)s”已被“%(editor)s”审核"
 
+#: templates/wagtailadmin/notifications/submitted.html:9
+#: templates/wagtailadmin/notifications/submitted.txt:7
 msgid "You can preview the page here:"
 msgstr "可以在此预览页面："
 
+#: templates/wagtailadmin/notifications/submitted_subject.txt:3
 #, python-format
 msgid "The page \"%(page)s\" has been submitted for moderation"
 msgstr "页面\"%(page)s\"已提交审核"
 
+#: templates/wagtailadmin/page_privacy/ancestor_privacy.html:2
+#: templates/wagtailadmin/page_privacy/set_privacy.html:2
 msgid "Page privacy"
 msgstr "页面私有设置"
 
+#: templates/wagtailadmin/page_privacy/ancestor_privacy.html:6
 msgid "This page has been made private by a parent page."
 msgstr "此页面已被父节点设置为私有。"
 
+#: templates/wagtailadmin/page_privacy/set_privacy.html:6
 msgid "Privacy changes apply to all children of this page too."
 msgstr "私有设置也会应用到此页面的所有子页面。"
 
+#: templates/wagtailadmin/pages/_lock_switch.html:8
 msgid "Edit lock"
 msgstr "编辑锁定"
 
+#: templates/wagtailadmin/pages/_lock_switch.html:14
 msgid "Locked"
 msgstr "已锁定"
 
+#: templates/wagtailadmin/pages/_lock_switch.html:16
 msgid "Unlocked"
 msgstr "已解锁"
 
+#: templates/wagtailadmin/pages/add_subpage.html:5
 #, python-format
 msgid "Create a page in %(title)s"
 msgstr "在%(title)s中创建一个页面"
 
+#: templates/wagtailadmin/pages/add_subpage.html:8
 msgid "Create a page in"
 msgstr "创建一个页面，在"
 
+#: templates/wagtailadmin/pages/add_subpage.html:12
 msgid "Choose which type of page you'd like to create."
 msgstr "选择创建的页面类型"
 
+#: templates/wagtailadmin/pages/add_subpage.html:24
 #, python-format
 msgid "Pages using %(page_type)s"
 msgstr " %(page_type)s类型的页面"
 
+#: templates/wagtailadmin/pages/confirm_delete.html:3
 #, python-format
 msgid "Delete %(title)s"
 msgstr "删除%(title)s"
 
+#: templates/wagtailadmin/pages/confirm_delete.html:11
 msgid "Are you sure you want to delete this page?"
 msgstr "确定要删除此页面吗？"
 
+#: templates/wagtailadmin/pages/confirm_delete.html:13
 #, python-format
 msgid ""
 "\n"
@@ -574,12 +825,15 @@ msgstr[0] ""
 "\n"
 "这还会删除 %(descendant_count)s 个子页面。"
 
+#: templates/wagtailadmin/pages/confirm_delete.html:24
 msgid "Yes, delete it"
 msgstr "是，删除此页面"
 
+#: templates/wagtailadmin/pages/confirm_delete.html:25
 msgid "No, don't delete it"
 msgstr "否，不删除此页面"
 
+#: templates/wagtailadmin/pages/confirm_delete.html:31
 #, python-format
 msgid ""
 "Alternatively you can <a href=\"%(unpublish_url)s\">unpublish the page</a>. "
@@ -589,36 +843,46 @@ msgstr ""
 "或者你可以 <a href=\"%(unpublish_url)s\">取消发布此页面</a>。此页面将不再公开"
 "展示，稍后你可以进行编辑或者重新发布。"
 
+#: templates/wagtailadmin/pages/confirm_move.html:3
 #, python-format
 msgid "Move %(title)s"
 msgstr "移动%(title)s"
 
+#: templates/wagtailadmin/pages/confirm_move.html:5 wagtail_hooks.py:153
 msgid "Move"
 msgstr "移动"
 
+#: templates/wagtailadmin/pages/confirm_move.html:10
 #, python-format
 msgid "Are you sure you want to move this page into '%(title)s'?"
 msgstr "确认将此页面移到'%(title)s'？"
 
+#: templates/wagtailadmin/pages/confirm_move.html:12
 #, python-format
 msgid ""
 "Are you sure you want to move this page and all of its children into "
 "'%(title)s'?"
 msgstr "确认将此页面极其子页面移到'%(title)s'？"
 
+#: templates/wagtailadmin/pages/confirm_move.html:17
 msgid "Yes, move this page"
 msgstr "是的，请开始移动吧"
 
+#: templates/wagtailadmin/pages/confirm_unpublish.html:3
 #, python-format
 msgid "Unpublish %(title)s"
 msgstr "取消发布%(title)s"
 
+#: templates/wagtailadmin/pages/confirm_unpublish.html:5
+#: templates/wagtailadmin/pages/edit.html:49 wagtail_hooks.py:174
 msgid "Unpublish"
 msgstr "取消发布"
 
+#: templates/wagtailadmin/pages/confirm_unpublish.html:9
 msgid "Are you sure you want to unpublish this page?"
 msgstr "此页面确定要取消发布吗？"
 
+#: templates/wagtailadmin/pages/confirm_unpublish.html:20
 #, python-format
 msgid ""
 "\n"
@@ -635,92 +899,128 @@ msgstr[0] ""
 "取消发布\n"
 "                "
 
+#: templates/wagtailadmin/pages/confirm_unpublish.html:31
 msgid "Yes, unpublish it"
 msgstr "是，取消发布"
 
+#: templates/wagtailadmin/pages/confirm_unpublish.html:32
 msgid "No, don't unpublish"
 msgstr "否，不取消发布"
 
+#: templates/wagtailadmin/pages/content_type_use.html:3
 #, python-format
 msgid "Pages using %(page_class_verbose_name)s"
 msgstr "使用%(page_class_verbose_name)s的页面"
 
+#: templates/wagtailadmin/pages/content_type_use.html:6
 msgid "Pages using"
 msgstr "页面使用"
 
+#: templates/wagtailadmin/pages/copy.html:3
 #, python-format
 msgid "Copy %(title)s"
 msgstr "复制%(title)s"
 
+#: templates/wagtailadmin/pages/copy.html:5 wagtail_hooks.py:160
 msgid "Copy"
 msgstr "复制"
 
+#: templates/wagtailadmin/pages/copy.html:27
 msgid "Copy this page"
 msgstr "复制此页"
 
+#: templates/wagtailadmin/pages/create.html:5
 #, python-format
 msgid "New %(page_type)s"
 msgstr "新%(page_type)s页面类型"
 
+#: templates/wagtailadmin/pages/create.html:16
 msgid "New"
 msgstr "新"
 
+#: templates/wagtailadmin/pages/create.html:31
+#: templates/wagtailadmin/pages/edit.html:43
 msgid "Saving…"
 msgstr "正在保存..."
 
+#: templates/wagtailadmin/pages/create.html:31
+#: templates/wagtailadmin/pages/edit.html:43
 msgid "Save draft"
 msgstr "保存草稿"
 
+#: templates/wagtailadmin/pages/create.html:36
+#: templates/wagtailadmin/pages/edit.html:56
 msgid "Publishing…"
 msgstr "正在发布..."
 
+#: templates/wagtailadmin/pages/create.html:36
+#: templates/wagtailadmin/pages/edit.html:56
 msgid "Publish"
 msgstr "发布"
 
+#: templates/wagtailadmin/pages/create.html:39
+#: templates/wagtailadmin/pages/edit.html:60
 msgid "Submit for moderation"
 msgstr "提交审核"
 
+#: templates/wagtailadmin/pages/create.html:81
+#: templates/wagtailadmin/pages/edit.html:115
 msgid "This page has unsaved changes."
 msgstr "页面还没保存"
 
+#: templates/wagtailadmin/pages/edit.html:6
 #, python-format
 msgid "Editing %(page_type)s: %(title)s"
 msgstr "编辑 %(page_type)s: %(title)s"
 
+#: templates/wagtailadmin/pages/edit.html:17
 #, python-format
 msgid "Editing %(page_type)s <span>%(title)s</span>"
 msgstr "编辑 %(page_type)s <span>%(title)s</span>"
 
+#: templates/wagtailadmin/pages/edit.html:43
 msgid "Page locked"
 msgstr "页面已锁定"
 
+#: templates/wagtailadmin/pages/edit.html:43
 msgid "Replace current draft"
 msgstr "替换当前的草稿"
 
+#: templates/wagtailadmin/pages/edit.html:56
 msgid "Publish this revision"
 msgstr "发布这个版本"
 
+#: templates/wagtailadmin/pages/edit.html:89
 #, python-format
 msgid "Last modified: %(last_mod)s"
 msgstr "上一次编辑： %(last_mod)s"
 
+#: templates/wagtailadmin/pages/edit.html:91
 #, python-format
 msgid "by %(modified_by)s"
 msgstr "按%(modified_by)s"
 
+#: templates/wagtailadmin/pages/edit.html:94 wagtail_hooks.py:181
 msgid "Revisions"
 msgstr "修订"
 
+#: templates/wagtailadmin/pages/index.html:3
 #, python-format
 msgid "Exploring %(title)s"
 msgstr "浏览 %(title)s"
 
+#: templates/wagtailadmin/pages/listing/_list.html:51
 msgid "Drag"
 msgstr "拖曳"
 
+#: templates/wagtailadmin/pages/listing/_list_choose.html:15
+#: templates/wagtailadmin/pages/listing/_list_move.html:15
+#: templates/wagtailadmin/pages/listing/_table_headers_explore.html:45
+#: templates/wagtailadmin/pages/listing/_table_headers_explore.html:48
 msgid "Updated"
 msgstr "已更新"
 
+#: templates/wagtailadmin/pages/listing/_list_explore.html:19
 msgid ""
 "\n"
 "                            The root level is where you can add new sites to "
@@ -733,9 +1033,12 @@ msgstr ""
 "问。\n"
 "                        "
 
+#: templates/wagtailadmin/pages/listing/_list_explore.html:23
+#: templates/wagtailadmin/pages/listing/_list_explore.html:45
 msgid "Configure a site now."
 msgstr "现在配置一个站点。"
 
+#: templates/wagtailadmin/pages/listing/_list_explore.html:27
 msgid ""
 "\n"
 "                            If you just want to add pages to an existing "
@@ -745,6 +1048,7 @@ msgstr ""
 "\n"
 "如果你只是想给已有的站点添加一个页面，请直接在首页中添加子页面。"
 
+#: templates/wagtailadmin/pages/listing/_list_explore.html:32
 msgid ""
 "\n"
 "                        Pages created here will not be accessible at any "
@@ -756,6 +1060,7 @@ msgstr ""
 "在这里创建的页面将无法通过URL访问，如果想给已有的站点添加页面，请在首页中添加"
 "子页面。"
 
+#: templates/wagtailadmin/pages/listing/_list_explore.html:41
 msgid ""
 "\n"
 "                        There is no site set up for this location. Pages "
@@ -766,6 +1071,7 @@ msgstr ""
 "\n"
 "当前位置没有配置站点，在这里创建的页面将无法通过任何URL访问。"
 
+#: templates/wagtailadmin/pages/listing/_list_explore.html:48
 msgid ""
 "\n"
 "                        There is no site record for this location. Pages "
@@ -775,37 +1081,51 @@ msgstr ""
 "\n"
 "当前位置没有配置站点，页面将无法访问。"
 
+#: templates/wagtailadmin/pages/listing/_list_explore.html:69
 msgid "No pages have been created at this location."
 msgstr "这个位置还没有创建页面。"
 
+#: templates/wagtailadmin/pages/listing/_list_explore.html:69
 #, python-format
 msgid "Why not <a href=\"%(add_page_url)s\">create one</a>?"
 msgstr "要不<a href=\"%(add_page_url)s\">创建一个</a>?"
 
+#: templates/wagtailadmin/pages/listing/_locked_indicator.html:10
 msgid "This page is locked to further editing"
 msgstr "此页面已锁定，无法编辑"
 
+#: templates/wagtailadmin/pages/listing/_navigation_choose.html:9
+#: templates/wagtailadmin/pages/listing/_navigation_move.html:9
 #, python-format
 msgid "Explore subpages of '%(title)s'"
 msgstr "查看'%(title)s'的子页面"
 
+#: templates/wagtailadmin/pages/listing/_navigation_choose.html:9
+#: templates/wagtailadmin/pages/listing/_navigation_explore.html:9
+#: templates/wagtailadmin/pages/listing/_navigation_move.html:9
 msgid "Explore"
 msgstr "浏览"
 
+#: templates/wagtailadmin/pages/listing/_navigation_explore.html:9
 #, python-format
 msgid "Explore child pages of '%(title)s'"
 msgstr "查看'%(title)s'的子页面"
 
+#: templates/wagtailadmin/pages/listing/_navigation_explore.html:11
 #, python-format
 msgid "Add a child page to '%(title)s'"
 msgstr "为'%(title)s'添加子页面"
 
+#: templates/wagtailadmin/pages/listing/_navigation_explore.html:11
+#: wagtail_hooks.py:124 wagtail_hooks.py:132
 msgid "Add child page"
 msgstr "添加子页面"
 
+#: templates/wagtailadmin/pages/listing/_page_title_explore.html:8
 msgid "Sites menu"
 msgstr "站点菜单"
 
+#: templates/wagtailadmin/pages/listing/_pagination.html:8
 #, python-format
 msgid ""
 "\n"
@@ -815,35 +1135,49 @@ msgstr ""
 "\n"
 "第 %(page_number)s 页 共 %(num_pages)s 页。"
 
+#: templates/wagtailadmin/pages/listing/_pagination.html:14
+#: templates/wagtailadmin/shared/pagination_nav.html:32
 msgid "Previous"
 msgstr "上一个"
 
+#: templates/wagtailadmin/pages/listing/_pagination.html:19
+#: templates/wagtailadmin/shared/pagination_nav.html:35
 msgid "Next"
 msgstr "下一个"
 
+#: templates/wagtailadmin/pages/listing/_privacy_indicator.html:11
 msgid "This page is protected from public view"
 msgstr "此页面已受保护，公众不可见。"
 
+#: templates/wagtailadmin/pages/listing/_table_headers_explore.html:23
 msgid "Disable ordering of child pages"
 msgstr "禁用子页面排序"
 
+#: templates/wagtailadmin/pages/listing/_table_headers_explore.html:23
+#: templates/wagtailadmin/pages/listing/_table_headers_explore.html:25
 msgid "Order"
 msgstr "排序"
 
+#: templates/wagtailadmin/pages/listing/_table_headers_explore.html:25
 msgid "Enable ordering of child pages"
 msgstr "启用子页面排序"
 
+#: templates/wagtailadmin/pages/move_choose_destination.html:3
 #, python-format
 msgid "Select a new parent page for %(title)s"
 msgstr "为 %(title)s选择新父节点"
 
+#: templates/wagtailadmin/pages/move_choose_destination.html:6
 #, python-format
 msgid "Select a new parent page for <span>%(title)s</span>"
 msgstr "为<span>%(title)s</span>选择新的父节点"
 
+#: templates/wagtailadmin/pages/preview_error.html:4
+#: templates/wagtailadmin/pages/preview_error.html:8
 msgid "Preview error"
 msgstr "预览错误"
 
+#: templates/wagtailadmin/pages/preview_error.html:12
 msgid ""
 "\n"
 "                Impossible to preview this page, some errors are remaining.\n"
@@ -857,25 +1191,32 @@ msgstr ""
 "                然后再进行预览。\n"
 "            "
 
+#: templates/wagtailadmin/pages/preview_error.html:19
 msgid "Close"
 msgstr "关闭"
 
+#: templates/wagtailadmin/pages/revisions/compare.html:4
 #, python-format
 msgid "Comparing %(title)s"
 msgstr "比较 %(title)s"
 
+#: templates/wagtailadmin/pages/revisions/compare.html:7
 msgid "Comparing"
 msgstr "正在比较"
 
+#: templates/wagtailadmin/pages/revisions/compare.html:14
 msgid "View revisions"
 msgstr "查看修订版本"
 
+#: templates/wagtailadmin/pages/revisions/compare.html:24
 msgid "Fields"
 msgstr "字段"
 
+#: templates/wagtailadmin/pages/revisions/compare.html:25
 msgid "Changes"
 msgstr "更改"
 
+#: templates/wagtailadmin/pages/revisions/compare.html:46
 #, python-format
 msgid ""
 "\n"
@@ -891,6 +1232,7 @@ msgstr[0] ""
 "\n"
 "下移 %(counter)s 位。"
 
+#: templates/wagtailadmin/pages/revisions/compare.html:52
 #, python-format
 msgid ""
 "\n"
@@ -906,41 +1248,82 @@ msgstr[0] ""
 "\n"
 "上移 %(counter)s 位。"
 
+#: templates/wagtailadmin/pages/revisions/compare.html:77
 msgid "There are no differences between these two revisions"
 msgstr "这两个修订版本内容一致。"
 
+#: templates/wagtailadmin/pages/revisions/confirm_unschedule.html:3
+#, python-format
+msgid "Unschedule Revision %(revision.id)s for %(title)s"
+msgstr "取消 %(title)s 的修订 %(revision.id)s 的定时发布"
+
+#: templates/wagtailadmin/pages/revisions/confirm_unschedule.html:5
+msgid "Unschedule"
+msgstr "取消定时发布"
+
+#: templates/wagtailadmin/pages/revisions/confirm_unschedule.html:9
+msgid "Are you sure you want to unschedule this revision?"
+msgstr "确定要取消定时发布这次修订吗？"
+
+#: templates/wagtailadmin/pages/revisions/confirm_unschedule.html:15
+msgid "Yes, unschedule"
+msgstr "是的，取消定时发布"
+
+#: templates/wagtailadmin/pages/revisions/confirm_unschedule.html:16
+msgid "No, don't unschedule"
+msgstr "否，不取消定时发布"
+
+#: templates/wagtailadmin/pages/revisions/index.html:4
 #, python-format
 msgid "Revisions of %(title)s"
 msgstr "%(title)s 的修订"
 
+#: templates/wagtailadmin/pages/revisions/index.html:7
 msgid "Revisions of"
 msgstr "修订"
 
+#: templates/wagtailadmin/pages/revisions/list.html:9
 msgid "Revision date"
 msgstr "修订时间"
 
+#: templates/wagtailadmin/pages/revisions/list.html:20
 msgctxt "points to a user who created a revision"
 msgid "by"
 msgstr "修订人"
 
+#: templates/wagtailadmin/pages/revisions/list.html:22
 msgid "Current draft"
 msgstr "当前草稿"
 
+#: templates/wagtailadmin/pages/revisions/list.html:23
 msgid "Live version"
 msgstr "发布版本"
 
+#: templates/wagtailadmin/pages/revisions/list.html:24
+msgid "Scheduled for"
+msgstr "定时发布"
+
+#: templates/wagtailadmin/pages/revisions/list.html:32
 msgid "Review this revision"
 msgstr "查看这个修订"
 
+#: templates/wagtailadmin/pages/revisions/list.html:36
 msgid "Compare with previous revision"
 msgstr "与上一个修订版本进行比较"
 
+#: templates/wagtailadmin/pages/revisions/list.html:40
+msgid "Cancel scheduled publish"
+msgstr "取消设定的定时发布"
+
+#: templates/wagtailadmin/pages/revisions/list.html:47
 msgid "No revisions of this page exist"
 msgstr "当前页面没有修订记录"
 
+#: templates/wagtailadmin/pages/revisions/results.html:8
 msgid "No revision of this page exist"
 msgstr "当前页面没有修订记录"
 
+#: templates/wagtailadmin/pages/search_results.html:5
 #, python-format
 msgid ""
 "\n"
@@ -954,101 +1337,134 @@ msgstr[0] ""
 "\n"
 "有%(counter)s个符合要求的页面"
 
+#: templates/wagtailadmin/pages/search_results.html:20
 #, python-format
 msgid "Sorry, no pages match <em>\"%(query_string)s\"</em>"
 msgstr "对不起，没有符合<em>\"%(query_string)s\"</em>的页面"
 
+#: templates/wagtailadmin/pages/search_results.html:24
 msgid "Enter a search term above"
 msgstr "输入上面的搜索条件"
 
+#: templates/wagtailadmin/pages/usage_results.html:9
 msgid "No pages use"
 msgstr "没有页面使用"
 
+#: templates/wagtailadmin/permissions/includes/collection_member_permissions_formset.html:22
+#: templates/wagtailadmin/shared/collection_chooser.html:6
 msgid "Collection"
 msgstr "集合"
 
+#: templates/wagtailadmin/shared/breadcrumb.html:7
 msgid "Root"
 msgstr "根"
 
+#: templates/wagtailadmin/shared/breadcrumb.html:10
+#: templates/wagtailadmin/shared/chooser_breadcrumb.html:6
 msgid "Home"
 msgstr "主页"
 
+#: templates/wagtailadmin/shared/collection_chooser.html:10
 msgid "All collections"
 msgstr "所有集合"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:6
 msgid "January"
 msgstr "一月"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:7
 msgid "February"
 msgstr "二月"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:8
 msgid "March"
 msgstr "三月"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:9
 msgid "April"
 msgstr "四月"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:10
 msgid "May"
 msgstr "五月"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:11
 msgid "June"
 msgstr "六月"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:12
 msgid "July"
 msgstr "七月"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:13
 msgid "August"
 msgstr "八月"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:14
 msgid "September"
 msgstr "九月"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:15
 msgid "October"
 msgstr "十月"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:16
 msgid "November"
 msgstr "十一月"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:17
 msgid "December"
 msgstr "十二月"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:20
 msgid "Sun"
 msgstr "周日"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:21
 msgid "Mon"
 msgstr "周一"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:22
 msgid "Tue"
 msgstr "周二"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:23
 msgid "Wed"
 msgstr "周三"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:24
 msgid "Thu"
 msgstr "周四"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:25
 msgid "Fri"
 msgstr "周五"
 
+#: templates/wagtailadmin/shared/datetimepicker_translations.html:26
 msgid "Sat"
 msgstr "周六"
 
+#: templates/wagtailadmin/shared/main_nav.html:8
 msgid "Edit your account"
 msgstr "编辑账户"
 
+#: templates/wagtailadmin/shared/main_nav.html:16
 msgid "Account settings"
 msgstr "帐号设置"
 
+#: templates/wagtailadmin/shared/main_nav.html:17
 msgid "Log out"
 msgstr "注销"
 
-#, python-format
-msgid "Page %(page_num)s of %(total_pages)s."
-msgstr "第 %(page_num)s 页，共 %(total_pages)s 页。"
+#: templates/wagtailadmin/shared/pagination_nav.html:24
+msgid "Jump To Page"
+msgstr ""
 
+#: templates/wagtailadmin/shared/search_other.html:3
 msgid "Other searches"
 msgstr "其它搜索"
 
+#: templates/wagtailadmin/skeleton.html:20
 msgid ""
 "You are using an <strong>outdated</strong> browser not supported by this "
 "software. Please <a href=\"http://browsehappy.com/\">upgrade your browser</"
@@ -1057,6 +1473,7 @@ msgstr ""
 "您正在使用一个本软件不支持的<strong>过期的</strong> 浏览器。请 <a href="
 "\"http://browsehappy.com/\">更新浏览器</a>。"
 
+#: templates/wagtailadmin/skeleton.html:23
 msgid ""
 "\n"
 "            Javascript is required to use Wagtail, but it is currently "
@@ -1073,243 +1490,214 @@ msgstr ""
 "a>。\n"
 "        "
 
+#: templates/wagtailadmin/userbar/base.html:8
 msgid "Go to Wagtail admin interface"
 msgstr "转到管理界面"
 
+#: templates/wagtailadmin/userbar/item_page_add.html:6
 msgid "Add a child page"
 msgstr "添加子页面"
 
+#: templates/wagtailadmin/userbar/item_page_explore.html:6
 msgid "Show in Explorer"
 msgstr "在资源管理器中显示"
 
+#: tests/tests.py:234
 msgid "Test"
 msgstr "测试"
 
-msgid "Catalan"
-msgstr "加泰罗尼亚语"
-
-msgid "German"
-msgstr "德语"
-
-msgid "Greek"
-msgstr "希腊语"
-
-msgid "English"
-msgstr "英语"
-
-msgid "Spanish"
-msgstr "西班牙语"
-
-msgid "Finnish"
-msgstr "芬兰语"
-
-msgid "French"
-msgstr "法语"
-
-msgid "Galician"
-msgstr "加利西亚语"
-
-msgid "Icelandic"
-msgstr "冰岛语"
-
-msgid "Italian"
-msgstr "意大利语"
-
-msgid "Korean"
-msgstr "韩国语"
-
-msgid "Lithuanian"
-msgstr "立陶宛语"
-
-msgid "Norwegian Bokmål"
-msgstr "挪威博克马尔语"
-
-msgid "Netherlands Dutch"
-msgstr "荷兰语"
-
-msgid "Persian"
-msgstr "波斯语"
-
-msgid "Polish"
-msgstr "波兰语"
-
-msgid "Brazilian Portuguese"
-msgstr "巴西葡萄牙语"
-
-msgid "Portuguese"
-msgstr "葡萄牙语"
-
-msgid "Romanian"
-msgstr "罗马尼亚语"
-
-msgid "Russian"
-msgstr "俄语"
-
-msgid "Swedish"
-msgstr "瑞典语"
-
-msgid "Chinese (China)"
-msgstr "中文 (中国)"
-
+#: utils.py:124
 msgid "Sorry, you do not have permission to access this area."
 msgstr "对不起， 你没有权限访问。"
 
+#: views/account.py:73
 msgid "Your password has been changed successfully!"
 msgstr "密码成功修改！"
 
+#: views/account.py:92
+#, fuzzy
+#| msgid "Your password has been changed successfully!"
+msgid "Your email has been changed successfully!"
+msgstr "密码成功修改！"
+
+#: views/account.py:123 views/account.py:147
 msgid "Your preferences have been updated."
 msgstr "你的首选项已被更新。"
 
+#: views/account.py:180
 msgid "You have been successfully logged out."
 msgstr "注销成功"
 
+#: views/collections.py:19 wagtail_hooks.py:95
 msgid "Collections"
 msgstr "集合"
 
+#: views/collections.py:20
 msgid "Add a collection"
 msgstr "添加一个集合"
 
+#: views/collections.py:31
 msgid "Add collection"
 msgstr "添加集合"
 
-#, python-brace-format
+#: views/collections.py:32
 msgid "Collection '{0}' created."
 msgstr "集合 '{0}' 已创建"
 
-#, python-brace-format
+#: views/collections.py:51
 msgid "Collection '{0}' updated."
 msgstr "集合 '{0}' 已更新"
 
+#: views/collections.py:52
 msgid "The collection could not be saved due to errors."
 msgstr "无法保存集合，出现错误。"
 
+#: views/collections.py:53 views/collections.py:71
 msgid "Delete collection"
 msgstr "删除集合"
 
-#, python-brace-format
+#: views/collections.py:68
 msgid "Collection '{0}' deleted."
 msgstr "集合 '{0}' 已删除"
 
+#: views/collections.py:72
 msgid "Are you sure you want to delete this collection?"
 msgstr "确定删除此集合？"
 
+#: views/generic.py:126
 msgid "Editing"
 msgstr "正在编辑"
 
-#, python-brace-format
+#: views/pages.py:220
 msgid "Page '{0}' created and scheduled for publishing."
-msgstr "页面 {0} 已创建并计划发布中。"
+msgstr "页面 {0} 已创建并设定为定时发布。"
 
+#: views/pages.py:226 views/pages.py:402 views/pages.py:915
+#: wagtail_hooks.py:116
 msgid "View live"
 msgstr "实时查看"
 
-#, python-brace-format
+#: views/pages.py:228
 msgid "Page '{0}' created and published."
 msgstr "页面'{0}'已创建并发布。"
 
-#, python-brace-format
+#: views/pages.py:232
 msgid "Page '{0}' created and submitted for moderation."
 msgstr "页面 '{0}' 已创建并提交审核。"
 
+#: views/pages.py:236 views/pages.py:417 wagtail_hooks.py:109
 msgid "View draft"
 msgstr "查看草稿"
 
+#: views/pages.py:246 views/pages.py:427
 msgid "Failed to send notifications to moderators"
 msgstr "向版主发送通知失败"
 
-#, python-brace-format
+#: views/pages.py:248
 msgid "Page '{0}' created."
 msgstr "页面'{0}'已创建"
 
+#: views/pages.py:271
 msgid "The page could not be created due to validation errors"
 msgstr "验证错误，页面无法创建。"
 
-#, python-brace-format
+#: views/pages.py:357
 msgid "Revision from {0} of page '{1}' has been scheduled for publishing."
-msgstr "页面 {1} 的版本 {0} 正在计划发布中。"
+msgstr "页面 {1} 的版本 {0} 正在计划定时发布。"
 
-#, python-brace-format
+#: views/pages.py:365
+msgid "Page '{0}' is live and this revision has been scheduled for publishing."
+msgstr "页面 {0} 已上线而且此修订已设定为定时发布。"
+
+#: views/pages.py:371
 msgid "Page '{0}' has been scheduled for publishing."
-msgstr "页面 {0} 正在计划发布中。"
+msgstr "页面 {0} 已设定为定时发布。"
 
-#, python-brace-format
+#: views/pages.py:388
 msgid "Revision from {0} of page '{1}' has been published."
 msgstr "页面 '{1}' 的修订版本 {0} 已经发布。"
 
-#, python-brace-format
+#: views/pages.py:395
 msgid "Page '{0}' has been published."
 msgstr "页面 '{0}' 已经发布。"
 
-#, python-brace-format
+#: views/pages.py:409
 msgid "Page '{0}' has been submitted for moderation."
 msgstr "页面 '{0}' 已经提交给版主。"
 
-#, python-brace-format
+#: views/pages.py:433
 msgid "Page '{0}' has been replaced with revision from {1}."
 msgstr "页面 '{0}' 的修订版本 {1} 已经被替换。"
 
-#, python-brace-format
+#: views/pages.py:440
 msgid "Page '{0}' has been updated."
 msgstr "页面 '{0}' 已被更新。"
 
+#: views/pages.py:468
 msgid "The page could not be saved as it is locked"
 msgstr "页面无法保存，已被锁定。"
 
+#: views/pages.py:471
 msgid "The page could not be saved due to validation errors"
 msgstr "页面无法保存。出现验证错误。"
 
+#: views/pages.py:498
 msgid "Compare with live version"
 msgstr "与发布版本进行比较"
 
+#: views/pages.py:501
 msgid "This page is currently awaiting moderation"
 msgstr "页面等待审核中"
 
-#, python-brace-format
+#: views/pages.py:538
 msgid "Page '{0}' deleted."
 msgstr "页面'{0}'已删除"
 
-#, python-brace-format
+#: views/pages.py:680
 msgid "Page '{0}' unpublished."
 msgstr "页面'{0}'已取消发布。"
 
-#, python-brace-format
+#: views/pages.py:742
 msgid "Page '{0}' moved."
 msgstr "页面 '{0}' 已移动。"
 
-#, python-brace-format
+#: views/pages.py:847
 msgid "Page '{0}' and {1} subpages copied."
 msgstr "页面 '{0}' 和 {1} 个子页面已复制。"
 
-#, python-brace-format
+#: views/pages.py:850
 msgid "Page '{0}' copied."
 msgstr "页面'{0}'已复制。"
 
-#, python-brace-format
+#: views/pages.py:906 views/pages.py:931 views/pages.py:952
 msgid "The page '{0}' is not currently awaiting moderation."
 msgstr "页面 '{0}'目前不在等待审核。"
 
-#, python-brace-format
+#: views/pages.py:912
 msgid "Page '{0}' published."
 msgstr "页面'{0}'已发布"
 
+#: views/pages.py:920
 msgid "Failed to send approval notifications"
 msgstr "发送批准通知失败。"
 
-#, python-brace-format
+#: views/pages.py:936
 msgid "Page '{0}' rejected for publication."
 msgstr "页面 '{0}'审核失败"
 
+#: views/pages.py:940
 msgid "Failed to send rejection notifications"
 msgstr "发送拒绝通知失败。"
 
-#, python-brace-format
+#: views/pages.py:978
 msgid "Page '{0}' is now locked."
 msgstr "页面 '{0}'已锁定"
 
-#, python-brace-format
+#: views/pages.py:1002
 msgid "Page '{0}' is now unlocked."
 msgstr "页面 '{0}'已解锁。"
 
+#: views/pages.py:1056
 #, python-format
 msgid ""
 "You are viewing a previous revision of this page from <b>%(created_at)s</b> "
@@ -1318,85 +1706,223 @@ msgstr ""
 "你正在查看当前页面的修订版本，版本时间：<b>%(created_at)s</b> 版本编辑： "
 "%(user)s"
 
+#: views/pages.py:1097
 msgid "Earliest"
 msgstr "最早的"
 
+#: views/pages.py:1115
 msgid "Latest"
 msgstr "最近的"
 
-#, python-brace-format
+#: views/pages.py:1147
+msgid "revision {0} of \"{1}\""
+msgstr "\"{1}\" 的修订 {0}"
+
+#: views/pages.py:1153
+msgid "Revision {0} of \"{1}\" unscheduled."
+msgstr "页面 '{1}' 的修订版本 {0} 已取消定时发布。"
+
+#: wagtail_hooks.py:104
 msgid "Edit '{title}'"
 msgstr "编辑 '{title}'"
 
-#, python-brace-format
+#: wagtail_hooks.py:111
 msgid "Preview draft version of '{title}'"
 msgstr "预览 '{title}' 的草稿"
 
-#, python-brace-format
+#: wagtail_hooks.py:118
 msgid "View live version of '{title}'"
 msgstr "查看 '{title}' 的发布版本"
 
-#, python-brace-format
+#: wagtail_hooks.py:126 wagtail_hooks.py:134
 msgid "Add a child page to '{title}' "
 msgstr "为 '{title}' 添加子页面"
 
+#: wagtail_hooks.py:139
 msgid "More"
 msgstr "更多"
 
-#, python-brace-format
+#: wagtail_hooks.py:144
 msgid "View more options for '{title}'"
 msgstr "查看 '{title}' 的更多选项"
 
-#, python-brace-format
+#: wagtail_hooks.py:155
 msgid "Move page '{title}'"
 msgstr "移动页面 '{title}'"
 
-#, python-brace-format
+#: wagtail_hooks.py:162
 msgid "Copy page '{title}'"
 msgstr "复制页面 '{title}'"
 
-#, python-brace-format
+#: wagtail_hooks.py:169
 msgid "Delete page '{title}'"
 msgstr "删除页面 '{title}'"
 
-#, python-brace-format
+#: wagtail_hooks.py:176
 msgid "Unpublish page '{title}'"
 msgstr "取消发布页面 '{title}'"
 
-#, python-brace-format
+#: wagtail_hooks.py:183
 msgid "View revision history for '{title}'"
 msgstr "查看 '{title}' 的修订历史"
 
-#, python-brace-format
+#: wagtail_hooks.py:198
+msgid "Set gravatar"
+msgstr "设置gravatar（全球通用头像）"
+
+#: wagtail_hooks.py:200
+msgid ""
+"Your avatar image is provided by Gravatar and is connected to your email "
+"address. With a Gravatar account you can set an avatar for any number of "
+"other email addresses you use."
+msgstr ""
+"您的头像是由Gravatar提供，与您的邮件地址关联。只需一个Gravatar帐号，你就可以"
+"为你使用的任意多个邮件地址设置头像。"
+
+#: wagtail_hooks.py:211
+msgid "Change the email address linked to your account."
+msgstr "修改绑定账户的邮箱地址"
+
+#: wagtail_hooks.py:221
+msgid "Change the password you use to log in."
+msgstr "修改用于登录的密码"
+
+#: wagtail_hooks.py:232
+msgid "Choose which email notifications to receive."
+msgstr "选择接收哪些邮件提醒"
+
+#: wagtail_hooks.py:241
+msgid "Language preferences"
+msgstr "语言首选项"
+
+#: wagtail_hooks.py:242
+msgid "Choose the language you want to use here."
+msgstr "请在这里选择你想使用的语言。"
+
+#: wagtail_hooks.py:332 wagtail_hooks.py:347 wagtail_hooks.py:362
+#: wagtail_hooks.py:377 wagtail_hooks.py:392 wagtail_hooks.py:407
 msgid "Heading {level}"
 msgstr "标题{level}"
 
+#: wagtail_hooks.py:422
 msgid "Bulleted list"
 msgstr "项目列表"
 
+#: wagtail_hooks.py:438
 msgid "Numbered list"
 msgstr "编号列表"
 
+#: wagtail_hooks.py:455
 msgid "Bold"
 msgstr "粗体"
 
+#: wagtail_hooks.py:471
 msgid "Italic"
 msgstr "斜体"
 
+#: wagtail_hooks.py:488
 msgid "Link"
 msgstr "链接"
 
+#: widgets.py:95
 msgid "Choose an item"
 msgstr "选择一项"
 
+#: widgets.py:96
 msgid "Choose another item"
 msgstr "选择其它项"
 
+#: widgets.py:97
 msgid "Clear choice"
 msgstr "清除选择"
 
+#: widgets.py:98
 msgid "Edit this item"
 msgstr "编辑此项"
 
+#: widgets.py:151
 msgid "Choose another page"
 msgstr "选择其它页面"
+
+#~ msgid "Please fill your email address."
+#~ msgstr "请填入邮件地址"
+
+#~ msgid ""
+#~ "Sorry, you cannot reset your password here as your user account is "
+#~ "managed by another server."
+#~ msgstr "对不起，您无法重置密码，因为账户不在此处管理"
+
+#~ msgid "This email address is not recognised."
+#~ msgstr "未知邮件地址"
+
+#~ msgid "The passwords do not match. Please try again."
+#~ msgstr "密码不匹配，请重试"
+
+#~ msgid "Page %(page_num)s of %(total_pages)s."
+#~ msgstr "第 %(page_num)s 页，共 %(total_pages)s 页。"
+
+#~ msgid "Catalan"
+#~ msgstr "加泰罗尼亚语"
+
+#~ msgid "German"
+#~ msgstr "德语"
+
+#~ msgid "Greek"
+#~ msgstr "希腊语"
+
+#~ msgid "English"
+#~ msgstr "英语"
+
+#~ msgid "Spanish"
+#~ msgstr "西班牙语"
+
+#~ msgid "Finnish"
+#~ msgstr "芬兰语"
+
+#~ msgid "French"
+#~ msgstr "法语"
+
+#~ msgid "Galician"
+#~ msgstr "加利西亚语"
+
+#~ msgid "Icelandic"
+#~ msgstr "冰岛语"
+
+#~ msgid "Italian"
+#~ msgstr "意大利语"
+
+#~ msgid "Korean"
+#~ msgstr "韩国语"
+
+#~ msgid "Lithuanian"
+#~ msgstr "立陶宛语"
+
+#~ msgid "Norwegian Bokmål"
+#~ msgstr "挪威博克马尔语"
+
+#~ msgid "Netherlands Dutch"
+#~ msgstr "荷兰语"
+
+#~ msgid "Persian"
+#~ msgstr "波斯语"
+
+#~ msgid "Polish"
+#~ msgstr "波兰语"
+
+#~ msgid "Brazilian Portuguese"
+#~ msgstr "巴西葡萄牙语"
+
+#~ msgid "Portuguese"
+#~ msgstr "葡萄牙语"
+
+#~ msgid "Romanian"
+#~ msgstr "罗马尼亚语"
+
+#~ msgid "Russian"
+#~ msgstr "俄语"
+
+#~ msgid "Swedish"
+#~ msgstr "瑞典语"
+
+#~ msgid "Chinese (China)"
+#~ msgstr "中文 (中国)"
