@@ -1,0 +1,67 @@
+Common subdirectories: images/api and /opt/ovoweb/soft/wagtail-2.5/wagtail/images/api
+Common subdirectories: images/check_files and /opt/ovoweb/soft/wagtail-2.5/wagtail/images/check_files
+Only in images/: .#fields.py
+Only in images/: #fields.py#
+diff images/fields.py /opt/ovoweb/soft/wagtail-2.5/wagtail/images/fields.py
+4a5
+> from django.core.files.images import get_image_dimensions
+18a20
+>         self.max_image_pixels = getattr(settings, 'WAGTAILIMAGES_MAX_IMAGE_PIXELS', 128 * 1000000)
+48a51,54
+>         self.error_messages['file_too_many_pixels'] = _(
+>             "This file has too many pixels (%%s). Maximum pixels %s."
+>         ) % self.max_image_pixels
+> 
+85a92,107
+>     def check_image_pixel_size(self, f):
+>         # Upload pixel size checking can be disabled by setting max upload pixel to None
+>         if self.max_image_pixels is None:
+>             return
+> 
+>         # Check the pixel size
+>         dimensions = get_image_dimensions(f)
+>         if dimensions == (None, None):
+>             return
+> 
+>         pixel_size = dimensions[0] * dimensions[1]
+>         if pixel_size > self.max_image_pixels:
+>             raise ValidationError(self.error_messages['file_too_many_pixels'] % (
+>                 pixel_size
+>             ), code='file_too_many_pixels')
+> 
+91a114
+>             self.check_image_pixel_size(f)
+Only in images/: .#image_operations.py
+Only in images/: #image_operations.py#
+diff images/image_operations.py /opt/ovoweb/soft/wagtail-2.5/wagtail/images/image_operations.py
+219a220,233
+> class ScaleOperation(Operation):
+>     def construct(self, percent):
+>         self.percent = float(percent)
+> 
+>     def run(self, willow, image, env):
+>         image_width, image_height = willow.get_size()
+> 
+>         scale = self.percent / 100
+>         width = float(image_width * scale)
+>         height = float(image_height * scale)
+> 
+>         return willow.resize((width, height))
+> 
+> 
+Common subdirectories: images/locale and /opt/ovoweb/soft/wagtail-2.5/wagtail/images/locale
+Common subdirectories: images/migrations and /opt/ovoweb/soft/wagtail-2.5/wagtail/images/migrations
+Only in /opt/ovoweb/soft/wagtail-2.5/wagtail/images/: __pycache__
+Only in images/: static
+Common subdirectories: images/static_src and /opt/ovoweb/soft/wagtail-2.5/wagtail/images/static_src
+Common subdirectories: images/templates and /opt/ovoweb/soft/wagtail-2.5/wagtail/images/templates
+Common subdirectories: images/templatetags and /opt/ovoweb/soft/wagtail-2.5/wagtail/images/templatetags
+Common subdirectories: images/tests and /opt/ovoweb/soft/wagtail-2.5/wagtail/images/tests
+Common subdirectories: images/views and /opt/ovoweb/soft/wagtail-2.5/wagtail/images/views
+diff images/wagtail_hooks.py /opt/ovoweb/soft/wagtail-2.5/wagtail/images/wagtail_hooks.py
+2d1
+< from django.contrib.staticfiles.templatetags.staticfiles import static
+4c3
+< from django.utils.html import format_html, format_html_join
+---
+> from django.utils.html import format_html

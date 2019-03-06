@@ -6,6 +6,8 @@
 /build/
 */*.bak/
 */*.bak.*/
+*.ori*
+*.ori/*
 *.bak
 *.bak.*
 /MANIFEST
