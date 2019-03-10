@@ -121,20 +121,20 @@ def register_image_operations():
         ('bgcolor', image_operations.BackgroundColorOperation),
     ]
 
-
 class ImagesSummaryItem(SummaryItem):
     order = 200
     template = 'wagtailimages/homepage/site_summary_images.html'
 
     def get_context(self):
+        images = permission_policy.instances_user_has_any_permission_for(self.request.user,['change', 'delete'])
         return {
-            'total_images': get_image_model().objects.count(),
+            #'total_images': get_image_model().objects.count(),
+            #'total_images': get_image_model().objects.filter(uploaded_by_user=self.request.user).count(),
+            'total_images': images.count(),
         }
 
     def is_shown(self):
-        return permission_policy.user_has_any_permission(
-            self.request.user, ['add', 'change', 'delete']
-        )
+        return permission_policy.user_has_any_permission(self.request.user, ['add', 'change', 'delete'])
 
 
 @hooks.register('construct_homepage_summary_items')

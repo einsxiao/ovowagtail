@@ -108,8 +108,10 @@ class DocumentsSummaryItem(SummaryItem):
     template = 'wagtaildocs/homepage/site_summary_documents.html'
 
     def get_context(self):
+        documents = permission_policy.instances_user_has_any_permission_for(self.request.user,['change', 'delete'])
         return {
-            'total_docs': get_document_model().objects.count(),
+            #'total_docs': get_document_model().objects.filter(uploaded_by_user=self.request.user).count(),
+            'total_docs': documents.count(),
         }
 
     def is_shown(self):

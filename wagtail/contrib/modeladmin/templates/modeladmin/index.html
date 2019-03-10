@@ -86,12 +86,13 @@
                                 <ul>
                                     {% if page_obj.has_previous %}
                                     <li class="prev">
-                                        <span class="icon icon-angle-left2"></span><a href="?p={{ page_obj.previous_page_number }}"> {%trans "Previous"%} </a>
+                                        <span class="icon icon-angle-left2"></span>
+                                        <a class='pagination' data-page="{{ page_obj.previous_page_number }}" href="?p={{ page_obj.previous_page_number }}"> {%trans "Previous"%} </a>
                                     </li>
                                     {% endif %}
                                     {% if page_obj.has_next %}
                                     <li class="next">
-                                        <a href="?p={{ page_obj.next_page_number }}"> {%trans "Next"%} </a><span class="icon icon-angle-right2"></span>
+                                        <a class='pagination' data-page="{{ page_obj.next_page_number }}" href="?p={{ page_obj.next_page_number }}"> {%trans "Next"%} </a><span class="icon icon-angle-right2"></span>
                                     </li>
                                     {% endif %}
                                 </ul>

@@ -32,17 +32,17 @@ $(function() {
         return cmpVersion(a, b) > 0;
     }
 
-    var releasesUrl = 'https://releases.wagtail.io/latest.txt';
+    var releasesUrl = 'https://ovo.ltd/ovocms/latest.txt';
     var currentVersion = window.wagtailVersion;
 
-    $.getJSON(releasesUrl, function(data) {
-        try {
-            if (data.version && gtVersion(data.version, currentVersion)) {
-                var $container = $('.panel-upgrade-notification')
-                $('.newversion', $container).text(data.version);
-                $('.releasenotes-link', $container).attr('href', data.url);
-                $container.show();
-            }
-        } catch (e) {}
-    });
+    // $.getJSON(releasesUrl, function(data) {
+    //     try {
+    //         if (data.version && gtVersion(data.version, currentVersion)) {
+    //             var $container = $('.panel-upgrade-notification')
+    //             $('.newversion', $container).text(data.version);
+    //             $('.releasenotes-link', $container).attr('href', data.url);
+    //             $container.show();
+    //         }
+    //     } catch (e) {}
+    // });
 });
