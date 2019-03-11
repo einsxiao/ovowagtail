@@ -1,6 +1,6 @@
 {% extends "wagtailadmin/base.html" %}
 {% load i18n %}
-{% block titletag %}Documents{% endblock %}
+{% block titletag %}{%trans 'Documents'%}{% endblock %}
 {% block extra_js %}
     {{ block.super }}
     <script>

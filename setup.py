@@ -66,9 +66,9 @@ documentation_extras = [
 setup(
     name='wagtail',
     version=__version__,
-    description='A Django content management system focused on flexibility and user experience',
-    author='Matthew Westcott',
-    author_email='matthew.westcott@torchbox.com',
+    description='The Django content management system focused on flexibility and user experience',
+    author='Eins Xiao',
+    author_email='eins@ovo.ltd',
     url='http://ovo.ltd/wagtail-ov/',
     packages=find_packages(),
     include_package_data=True,

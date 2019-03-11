@@ -2,7 +2,8 @@ from django.template.loader import render_to_string
 
 from wagtail.admin.utils import user_has_any_page_permission
 from wagtail.core import hooks
-from wagtail.core.models import Page, Site
+from wagtail.core.models import Page, Site, UserPagePermissionsProxy
+from wagtail.admin.navigation import get_explorable_root_page
 
 
 class SummaryItem:
@@ -30,8 +31,10 @@ class PagesSummaryItem(SummaryItem):
         # Otherwise, if there are multiple sites, link to the root page
         try:
             site = Site.objects.get()
-            root = site.root_page
+            #root = site.root_page
+            root = get_explorable_root_page(self.request.user)
             single_site = True
+            total_pages = UserPagePermissionsProxy(self.request.user).editable_pages().count()
         except (Site.DoesNotExist, Site.MultipleObjectsReturned):
             root = None
             single_site = False
@@ -39,7 +42,8 @@ class PagesSummaryItem(SummaryItem):
         return {
             'single_site': single_site,
             'root_page': root,
-            'total_pages': Page.objects.count() - 1,  # subtract 1 because the root node is not a real page
+            #'total_pages': Page.objects.count() - 1,  # subtract 1 because the root node is not a real page
+            'total_pages': total_pages, 
         }
 
     def is_shown(self):
