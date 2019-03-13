@@ -32,6 +32,9 @@ class AbstractDocument(CollectionMember, index.Indexed, models.Model):
     )
 
     tags = TaggableManager(help_text=None, blank=True, verbose_name=_('tags'))
+    file_size = models.PositiveIntegerField(null=True, editable=False)
+    # A SHA-1 hash of the file contents
+    file_hash = models.CharField(max_length=40, null=True, blank=True, editable=False)
 
     objects = DocumentQuerySet.as_manager()
 
