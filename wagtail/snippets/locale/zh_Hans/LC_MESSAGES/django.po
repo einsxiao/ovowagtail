@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wagtail\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-28 15:05+0800\n"
+"POT-Creation-Date: 2019-03-13 19:29+0800\n"
 "PO-Revision-Date: 2018-01-26 16:03+0000\n"
 "Last-Translator: Matt Westcott <matthew@torchbox.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/torchbox/wagtail/"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: apps.py:8
 msgid "Wagtail snippets"
-msgstr ""
+msgstr "Wagtail模板件"
 
 #: templates/wagtailsnippets/chooser/choose.html:2
 msgid "Choose"
@@ -69,6 +69,7 @@ msgstr ""
 
 #: templates/wagtailsnippets/snippets/confirm_delete.html:5
 #: templates/wagtailsnippets/snippets/type_index.html:45
+#, python-format
 msgid "Delete %(snippet_type_name)s"
 msgstr "删除  %(snippet_type_name)s "
 
@@ -77,11 +78,11 @@ msgid "Delete "
 msgstr "删除"
 
 #: templates/wagtailsnippets/snippets/confirm_delete.html:23
-#: templates/wagtailsnippets/snippets/edit.html:42
+#: templates/wagtailsnippets/snippets/edit.html:43
 #, python-format
 msgid "Used %(usage_count)s time"
 msgid_plural "Used %(usage_count)s times"
-msgstr[0] ""
+msgstr[0] "使用了%(usage_count)s次"
 
 #: templates/wagtailsnippets/snippets/confirm_delete.html:26
 #, python-format
@@ -89,6 +90,7 @@ msgid "Are you sure you want to delete this %(snippet_type_name)s?"
 msgstr "确定要删除 %(snippet_type_name)s？"
 
 #: templates/wagtailsnippets/snippets/confirm_delete.html:28
+#, python-format
 msgid "Are you sure you want to delete %(count)s %(snippet_type_name)s?"
 msgstr "确定要删除 %(count)s %(snippet_type_name)s？"
 
@@ -107,6 +109,7 @@ msgstr "新增"
 
 #: templates/wagtailsnippets/snippets/create.html:16
 #: templates/wagtailsnippets/snippets/edit.html:23
+#: templates/wagtailsnippets/snippets/edit.html:29
 msgid "Saving…"
 msgstr "正在保存……"
 
@@ -128,14 +131,18 @@ msgstr "编辑"
 msgid "Delete"
 msgstr "删除"
 
-#: templates/wagtailsnippets/snippets/edit.html:40
+#: templates/wagtailsnippets/snippets/edit.html:29
+msgid "Save & Return"
+msgstr "保存并返回"
+
+#: templates/wagtailsnippets/snippets/edit.html:41
 msgid "Usage"
 msgstr "使用情况"
 
 #: templates/wagtailsnippets/snippets/index.html:3
 #: templates/wagtailsnippets/snippets/index.html:5 wagtail_hooks.py:31
 msgid "Snippets"
-msgstr "片段"
+msgstr "模板件"
 
 #: templates/wagtailsnippets/snippets/list.html:10
 #: templates/wagtailsnippets/snippets/usage.html:16
@@ -143,6 +150,7 @@ msgid "Title"
 msgstr "标题"
 
 #: templates/wagtailsnippets/snippets/results.html:5
+#, python-format
 msgid ""
 "\n"
 "            There is %(counter)s match\n"
@@ -168,12 +176,12 @@ msgstr ""
 #: templates/wagtailsnippets/snippets/type_index.html:3
 #, python-format
 msgid "Snippets %(snippet_type_name_plural)s"
-msgstr "片段 %(snippet_type_name_plural)s"
+msgstr "模板件 %(snippet_type_name_plural)s"
 
 #: templates/wagtailsnippets/snippets/type_index.html:25
 #, python-format
 msgid "Snippets <span>%(snippet_type_name_plural)s</span>"
-msgstr "片段 <span>%(snippet_type_name_plural)s</span>"
+msgstr "模板件 <span>%(snippet_type_name_plural)s</span>"
 
 #: templates/wagtailsnippets/snippets/type_index.html:40
 #, python-format
@@ -181,6 +189,7 @@ msgid "Add %(snippet_type_name)s"
 msgstr "增加 %(snippet_type_name)s"
 
 #: templates/wagtailsnippets/snippets/type_index.html:41
+#, python-format
 msgid "Copy %(snippet_type_name)s"
 msgstr "复制 %(snippet_type_name)s"
 
@@ -231,15 +240,15 @@ msgstr "无法创建片段，出现错误。"
 msgid "{snippet_type} '{instance}' updated."
 msgstr "{snippet_type} '{instance}' 已更新。"
 
-#: views/snippets.py:256
+#: views/snippets.py:258
 msgid "The snippet could not be saved due to errors."
 msgstr "无法保存片段，出现错误。"
 
-#: views/snippets.py:294
+#: views/snippets.py:297
 msgid "{snippet_type} '{instance}' deleted."
 msgstr "{snippet_type} '{instance}' 已删除。"
 
-#: views/snippets.py:299
+#: views/snippets.py:302
 msgid "{count} {snippet_type} deleted."
 msgstr "{count} {snippet_type} '{instance}' 已删除。"
 

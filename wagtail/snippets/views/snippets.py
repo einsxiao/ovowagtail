@@ -251,12 +251,15 @@ def edit(request, app_label, model_name, pk):
                     ), _('Edit'))
                 ]
             )
-            return redirect('wagtailsnippets:list', app_label, model_name)
+            if request.POST.get("save_return"):
+                return redirect('wagtailsnippets:list', app_label, model_name)
+            else: pass
         else:
             messages.error(request, _("The snippet could not be saved due to errors."))
-            edit_handler = edit_handler.bind_to_instance(instance=instance,
-                                                         form=form,
-                                                         request=request)
+            pass
+        edit_handler = edit_handler.bind_to_instance(instance=instance,
+                                                     form=form,
+                                                     request=request)
     else:
         form = form_class(instance=instance)
         edit_handler = edit_handler.bind_to_instance(instance=instance,

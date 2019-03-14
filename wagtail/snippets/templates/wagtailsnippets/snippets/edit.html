@@ -20,12 +20,13 @@
                     <ul>
                         <li class="actions">
                             <div class="dropdown dropup dropdown-button match-width">
-                                <button type="submit" class="button action-save button-longrunning" tabindex="3" data-clicked-text="{% trans 'Saving…' %}" {% if page.locked %}disabled {% endif %}>
+                                <button type="submit" name='save' value='save' class="button action-save button-longrunning" tabindex="3" data-clicked-text="{% trans 'Saving…' %}" {% if page.locked %}disabled {% endif %}>
                                     <span class="icon icon-spinner"></span><em>{% trans 'Save' %}</em>
                                 </button>
                                 <div class="dropdown-toggle icon icon-arrow-up"></div>
                                 <ul role="menu">
                                     <li><a href="{% url 'wagtailsnippets:delete' model_opts.app_label model_opts.model_name instance.pk|admin_urlquote %}" class="shortcut">{% trans "Delete" %}</a></li>
+                                    <li><input type="submit" name="save_return" value='{% trans "Save & Return" %}' class="button action-save-return button-longrunning" tabindex="3" data-clicked-text="{% trans 'Saving…' %}" {% if page.locked %}disabled {% endif %}></li>
                                 </ul>
                             </div>
                         </li>
