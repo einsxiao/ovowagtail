@@ -6,7 +6,6 @@ from wagtail.admin.modal_workflow import render_modal_workflow
 from wagtail.core.models import Page, PageViewRestriction
 
 
-
 def set_privacy(request, page_id):
     page = get_object_or_404(Page, id=page_id)
     page_perms = page.permissions_for_user(request.user)
@@ -35,7 +34,9 @@ def set_privacy(request, page_id):
                 form.save()
 
             return render_modal_workflow(
-                request, None, 'wagtailadmin/page_privacy/set_privacy_done.js', {
+                request, None, None,
+                None, json_data={
+                    'step': 'set_privacy_done',
                     'is_public': (form.cleaned_data['restriction_type'] == 'none')
                 }
             )
@@ -62,10 +63,8 @@ def set_privacy(request, page_id):
     else:
         # no restriction set at ancestor level - can set restrictions here
         return render_modal_workflow(
-            request,
-            'wagtailadmin/page_privacy/set_privacy.html',
-            'wagtailadmin/page_privacy/set_privacy.js', {
+            request, 'wagtailadmin/page_privacy/set_privacy.html', None, {
                 'page': page,
                 'form': form,
-            }
+            }, json_data={'step': 'set_privacy'}
         )

@@ -82,18 +82,17 @@ class AbstractFormField(Orderable):
     )
     field_type = models.CharField(verbose_name=_('field type'), max_length=16, choices=FORM_FIELD_CHOICES)
     required = models.BooleanField(verbose_name=_('required'), default=True)
-    choices = models.TextField(
-        verbose_name=_('choices'),
-        blank=True,
-        help_text=_('Comma separated list of choices. Only applicable in checkboxes, radio and dropdown.')
-    )
+    choices = models.TextField(verbose_name=_('choices'), blank=True,
+        help_text=_('Comma separated list of choices. Only applicable in checkboxes, radio and dropdown.'))
     default_value = models.CharField(
         verbose_name=_('default value'),
         max_length=255,
         blank=True,
         help_text=_('Default value. Comma separated values supported for checkboxes.')
     )
-    help_text = models.CharField(verbose_name=_('help text'), max_length=255, blank=True)
+    #help_text = models.CharField(verbose_name=_('help text'), max_length=255, blank=True)
+    help_text = models.TextField(verbose_name=_('help text'), blank=True,
+        help_text=_('Comma separated list of choices. Only applicable in checkboxes, radio and dropdown.'))
 
     @property
     def clean_name(self):
@@ -103,12 +102,12 @@ class AbstractFormField(Orderable):
         return str(slugify(str(unidecode(self.label))))
 
     panels = [
-        FieldPanel('label'),
-        FieldPanel('help_text'),
-        FieldPanel('required'),
-        FieldPanel('field_type', classname="formbuilder-type"),
-        FieldPanel('choices', classname="formbuilder-choices"),
-        FieldPanel('default_value', classname="formbuilder-default"),
+        FieldPanel('label',classname='compact'),
+        FieldPanel('required',classname='compact'),
+        FieldPanel('field_type', classname="formbuilder-type compact compact-200"),
+        FieldPanel('default_value', classname="formbuilder-default compact compact-200"),
+        FieldPanel('choices', classname="formbuilder-choices compact compact-250"),
+        FieldPanel('help_text',classname='compact compact-250'),
     ]
 
     class Meta:

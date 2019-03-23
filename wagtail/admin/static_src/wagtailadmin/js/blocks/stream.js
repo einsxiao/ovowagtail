@@ -12,6 +12,7 @@
         self.container = $('#' + opts.id);
         self.inner = $('.stream-menu-inner', self.container);
         self.blocklist = $('ul', self.inner);
+        self.container.addClass('stream-menu-closed');
 
         if (self.container.hasClass('stream-menu-closed')) {
             self.inner.css('height', 0);
