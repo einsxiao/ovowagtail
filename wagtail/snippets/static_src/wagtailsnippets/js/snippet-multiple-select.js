@@ -34,6 +34,8 @@ var updateDeleteButton = function(anySelected, newState) {
     // disable button and remove url
     $deleteButton.addClass('visuallyhidden');
     $deleteButton.attr('href', null);
+    $copyButton.addClass('visuallyhidden');
+    $copyButton.attr('href', null);
   }
 };
 

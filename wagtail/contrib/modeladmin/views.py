@@ -167,7 +167,8 @@ class ModelFormView(WMABaseView, FormView):
             self.request, self.get_success_message(instance),
             buttons=self.get_success_message_buttons(instance)
         )
-        return redirect(self.get_success_url())
+        if self.request.POST.get("save_return"): return redirect(self.get_success_url())
+        return self.render_to_response(self.get_context_data())
 
     def form_invalid(self, form):
         messages.error(self.request, self.get_error_message())

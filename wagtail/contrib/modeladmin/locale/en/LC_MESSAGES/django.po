@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-16 11:28+0000\n"
+"POT-Creation-Date: 2019-03-26 15:19+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: apps.py:8
+msgid "Wagtail ModelAdmin"
+msgstr ""
 
 #: forms.py:18
 msgid "Parent page"
@@ -96,6 +100,7 @@ msgid "Continue"
 msgstr ""
 
 #: templates/modeladmin/create.html:33 templates/modeladmin/edit.html:8
+#: templates/modeladmin/edit.html:17
 msgid "Saving…"
 msgstr ""
 
@@ -124,6 +129,10 @@ msgstr ""
 msgid "Yes, delete"
 msgstr ""
 
+#: templates/modeladmin/edit.html:17
+msgid "Save & Return"
+msgstr ""
+
 #: templates/modeladmin/includes/breadcrumb.html:3
 msgid "Home"
 msgstr ""
@@ -147,23 +156,23 @@ msgstr ""
 msgid "Search %(name)s"
 msgstr ""
 
-#: templates/modeladmin/index.html:46
+#: templates/modeladmin/index.html:47
 msgid "Filter"
 msgstr ""
 
-#: templates/modeladmin/index.html:57
+#: templates/modeladmin/index.html:58
 #, python-format
 msgid ""
 "No %(name)s have been created yet. One of the following must be created "
 "before you can add any %(name)s:"
 msgstr ""
 
-#: templates/modeladmin/index.html:62
+#: templates/modeladmin/index.html:63
 #, python-format
 msgid "No %(name)s have been created yet."
 msgstr ""
 
-#: templates/modeladmin/index.html:64
+#: templates/modeladmin/index.html:65
 #, python-format
 msgid ""
 "\n"
@@ -172,9 +181,12 @@ msgid ""
 "                                            "
 msgstr ""
 
-#: templates/modeladmin/index.html:78
-#, python-format
-msgid "Page %(current_page)s of %(num_pages)s."
+#: templates/modeladmin/index.html:90 templatetags/modeladmin_tags.py:106
+msgid "Previous"
+msgstr ""
+
+#: templates/modeladmin/index.html:95 templatetags/modeladmin_tags.py:119
+msgid "Next"
 msgstr ""
 
 #: templates/modeladmin/inspect.html:25
@@ -182,16 +194,7 @@ msgstr ""
 msgid "Back to %(model_name)s list"
 msgstr ""
 
-#: templatetags/modeladmin_tags.py:106
-msgid "Previous"
-msgstr ""
-
-#: templatetags/modeladmin_tags.py:119
-msgid "Next"
-msgstr ""
-
 #: views.py:151
-#, python-brace-format
 msgid "{model_name} '{instance}' created."
 msgstr ""
 
@@ -219,7 +222,6 @@ msgid "Editing %s"
 msgstr ""
 
 #: views.py:704
-#, python-brace-format
 msgid "{model_name} '{instance}' updated."
 msgstr ""
 
@@ -241,7 +243,6 @@ msgid ""
 msgstr ""
 
 #: views.py:790
-#, python-brace-format
 msgid "{model} '{instance}' deleted."
 msgstr ""
 
