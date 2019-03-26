@@ -76,7 +76,7 @@ class WMABaseView(TemplateView):
         return self.menu_icon
 
     def get_page_title(self):
-        return self.page_title or capfirst(self.opts.verbose_name_plural)
+        return _(self.page_title) or capfirst(self.opts.verbose_name_plural)
 
     def get_meta_title(self):
         return self.meta_title or self.get_page_title()
