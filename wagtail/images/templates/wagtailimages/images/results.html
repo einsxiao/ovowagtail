@@ -21,6 +21,9 @@
                 <a class="image-choice" href="{% url 'wagtailimages:edit' image.id %}">
                     {% include "wagtailimages/images/results_image.html" %}
                     <h3>{{ image.title|ellipsistrim:60 }}</h3>
+                    <div class='image-operations'>
+                        <a href="{% url 'wagtailimages:delete' image.id %}" class="button-small button button-secondary no">{% trans "Delete image" %}</a>
+                    </div>
                 </a>
             </li>
         {% endfor %}
