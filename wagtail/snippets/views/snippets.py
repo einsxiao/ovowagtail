@@ -292,19 +292,11 @@ def delete(request, app_label, model_name, pk=None):
     if request.method == 'POST':
         for instance in instances:
             instance.delete()
-
-        if count == 1:
             message_content = _("{snippet_type} '{instance}' deleted.").format(
                 snippet_type=capfirst(model._meta.verbose_name_plural),
                 instance=instance
             )
-        else:
-            message_content = _("{count} {snippet_type} deleted.").format(
-                snippet_type=capfirst(model._meta.verbose_name_plural),
-                count=count
-            )
-
-        messages.success(request, message_content)
+            messages.success(request, message_content)
 
         return redirect('wagtailsnippets:list', app_label, model_name)
 

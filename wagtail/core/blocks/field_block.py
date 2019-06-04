@@ -26,7 +26,7 @@ class FieldBlock(Block):
         field = self.field
         widget = field.widget
 
-        widget_attrs = {'id': prefix, 'placeholder': self.label}
+        widget_attrs = {'id': prefix, 'placeholder': self.placeholder if hasattr(self,'placeholder') and self.placeholder else self.label }
 
         field_value = field.prepare_value(self.value_for_form(value))
 
@@ -96,7 +96,7 @@ class FieldBlock(Block):
 
 class CharBlock(FieldBlock):
 
-    def __init__(self, required=True, help_text=None, max_length=None, min_length=None, **kwargs):
+    def __init__(self, required=True, help_text=None, placeholder=None, max_length=None, min_length=None, **kwargs):
         # CharField's 'label' and 'initial' parameters are not exposed, as Block handles that functionality natively
         # (via 'label' and 'default')
         self.field = forms.CharField(
@@ -105,6 +105,7 @@ class CharBlock(FieldBlock):
             max_length=max_length,
             min_length=min_length
         )
+        self.placeholder = placeholder
         super().__init__(**kwargs)
 
     def get_searchable_content(self, value):
@@ -113,7 +114,7 @@ class CharBlock(FieldBlock):
 
 class TextBlock(FieldBlock):
 
-    def __init__(self, required=True, help_text=None, rows=1, max_length=None, min_length=None, **kwargs):
+    def __init__(self, required=True, help_text=None, placeholder=None, rows=1, max_length=None, min_length=None, **kwargs):
         self.field_options = {
             'required': required,
             'help_text': help_text,
@@ -121,6 +122,7 @@ class TextBlock(FieldBlock):
             'min_length': min_length
         }
         self.rows = rows
+        self.placeholder = placeholder
         super().__init__(**kwargs)
 
     @cached_property
