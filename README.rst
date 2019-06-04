@@ -1,11 +1,13 @@
-.. image:: https://api.travis-ci.org/wagtail/wagtail.svg?branch=master
-    :target: https://travis-ci.org/wagtail/wagtail
-.. image:: https://img.shields.io/pypi/l/wagtail.svg
-    :target: https://pypi.python.org/pypi/wagtail/
-.. image:: https://img.shields.io/pypi/v/wagtail.svg
-    :target: https://pypi.python.org/pypi/wagtail/
-.. image:: http://codecov.io/github/wagtail/wagtail/coverage.svg?branch=master
-    :target: http://codecov.io/github/wagtail/wagtail?branch=master
+OVO Wagtail
+===========
+Customed Wagtail version for OVOCMS.
+
+Fully zh-hans support.
+Collapsible streamblock fields.
+Compact attributes for streamblock fields
+Nice compact streamblock
+Markdown support
+Simplemde
 
 
 Wagtail CMS
